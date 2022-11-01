@@ -1,0 +1,186 @@
+@mixin flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Mouse Memoirs', sans-serif;
+  font-family: 'PT Sans', sans-serif;
+  letter-spacing: 0.08rem;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  overflow: scroll;
+  overflow-x: hidden;
+
+  .landing-page {
+    @include flex;
+    position: relative;
+    // height: 600vh;
+    height: 100vh;
+
+    .cloud-circle1 {
+      width: 30%;
+      height: 30%;
+      border-radius: 50%;
+      filter: url(#filter);
+      box-shadow: 15rem 15rem 6rem 0px rgb(128, 127, 127);
+      position: fixed;
+      top: -20%;
+      left: 0;
+      z-index: 5;
+    }
+  
+    .cloud-circle2 {
+      width: 40%;
+      height: 35%;
+      border-radius: 50%;
+      filter: url(#filter);
+      box-shadow: 20rem 20rem 5rem 0px rgb(168, 167, 167);
+      position: fixed;
+      top: -25%;
+      left: 20%;
+      z-index: 10;
+    }
+
+    .cloud-circle3 {
+      width: 35%;
+      height: 55%;
+      border-radius: 50%;
+      filter: url(#filter);
+      box-shadow: 25rem 25rem 5rem 0px rgb(156, 151, 151);
+      position: fixed;
+      top: -60%;
+      left: 30%;
+      z-index: 7;
+    }
+
+    // #first-paragraph, #second-paragraph {
+    //   position: fixed;
+    //   left: 50%;
+    //   transform: translateX(-50%);
+    //   font-size: 1rem;
+    //   text-align: center;
+    //   opacity: 0;
+    //   width: 100%;
+    //   z-index: 100;
+    // }
+
+    // #iran-title {
+    //   font-size: 15rem;
+    //   position: fixed;
+    //   top: 50%;
+    //   left: 50%;
+    //   transform: translate(-50%, -50%);
+    //   opacity: 0;
+    // }
+
+    // #first-paragraph {
+    //   top: 20%;
+    // }
+
+    // #second-paragraph {
+    //   bottom: 20%;
+    //   margin-top: 0.5rem;
+    // }
+
+    #sun {
+      position: fixed;
+      top: 15%;
+      left: 65%;
+      height: 200px;
+      width: 200px;
+      box-shadow: 20px 20px 1000px 100px rgb(248, 248, 245);
+      border-radius: 50%;
+      border: none;
+      outline: none;
+      background: radial-gradient(closest-side, #e7eb09, #fafaf9);
+      z-index: 0;
+      opacity: 1;
+    }
+  }
+
+  .texts {
+    position: relative;
+    width: 100vw;
+    height: 200vh;
+    // display: flex;
+    // justify-content: space-between;
+    // align-items: center;
+    // flex-direction: column;
+
+    text-align: center;
+
+    #first-paragraph, #second-paragraph {
+      // position: fixed;
+      // left: 50%;
+      // transform: translateX(-50%);
+      font-size: 1rem;
+      text-align: center;
+      opacity: 0;
+      width: 100%;
+      z-index: 100;
+      margin-bottom: 2rem;
+    }
+
+    #iran-title {
+      font-size: 15rem;
+      // position: fixed;
+      // top: 50%;
+      // left: 50%;
+      // transform: translate(-50%, -50%);
+      opacity: 0;
+    }
+
+    // #first-paragraph {
+    //   top: 20%;
+    // }
+
+    // #second-paragraph {
+    //   bottom: 20%;
+    //   margin-top: 0.5rem;
+    // }
+  }
+
+  section {
+    height: 100vh;
+  }
+
+  #second-sec {
+    z-index: 20;
+    opacity: 1;
+    color: black;
+    opacity: 0.8;
+    @include flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    #fall-title {
+      font-size: 5rem;
+    }
+
+    #fall-description {
+      font-size: 2rem;
+    }
+  }
+}
+
+@keyframes flow {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.02);
+  }
+  100% {
+    transform: scale(1);
+  }
+}

@@ -1,0 +1,184 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Mouse Memoirs', sans-serif;
+  font-family: 'PT Sans', sans-serif;
+  letter-spacing: 0.08rem;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  overflow: scroll;
+  overflow-x: hidden;
+}
+
+body .landing-page {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  position: relative;
+  height: 100vh;
+}
+
+body .landing-page .cloud-circle1 {
+  width: 30%;
+  height: 30%;
+  border-radius: 50%;
+  -webkit-filter: url(#filter);
+          filter: url(#filter);
+  -webkit-box-shadow: 15rem 15rem 6rem 0px #807f7f;
+          box-shadow: 15rem 15rem 6rem 0px #807f7f;
+  position: fixed;
+  top: -20%;
+  left: 0;
+  z-index: 5;
+}
+
+body .landing-page .cloud-circle2 {
+  width: 40%;
+  height: 35%;
+  border-radius: 50%;
+  -webkit-filter: url(#filter);
+          filter: url(#filter);
+  -webkit-box-shadow: 20rem 20rem 5rem 0px #a8a7a7;
+          box-shadow: 20rem 20rem 5rem 0px #a8a7a7;
+  position: fixed;
+  top: -25%;
+  left: 20%;
+  z-index: 10;
+}
+
+body .landing-page .cloud-circle3 {
+  width: 35%;
+  height: 55%;
+  border-radius: 50%;
+  -webkit-filter: url(#filter);
+          filter: url(#filter);
+  -webkit-box-shadow: 25rem 25rem 5rem 0px #9c9797;
+          box-shadow: 25rem 25rem 5rem 0px #9c9797;
+  position: fixed;
+  top: -60%;
+  left: 30%;
+  z-index: 7;
+}
+
+body .landing-page #sun {
+  position: fixed;
+  top: 15%;
+  left: 65%;
+  height: 200px;
+  width: 200px;
+  -webkit-box-shadow: 20px 20px 1000px 100px #f8f8f5;
+          box-shadow: 20px 20px 1000px 100px #f8f8f5;
+  border-radius: 50%;
+  border: none;
+  outline: none;
+  background: radial-gradient(closest-side, #e7eb09, #fafaf9);
+  z-index: 0;
+  opacity: 1;
+}
+
+body .texts {
+  position: relative;
+  width: 100vw;
+  height: 200vh;
+  text-align: center;
+}
+
+body .texts #first-paragraph, body .texts #second-paragraph {
+  font-size: 1rem;
+  text-align: center;
+  opacity: 0;
+  width: 100%;
+  z-index: 100;
+  margin-bottom: 2rem;
+}
+
+body .texts #iran-title {
+  font-size: 15rem;
+  opacity: 0;
+}
+
+body section {
+  height: 100vh;
+}
+
+body #second-sec {
+  z-index: 20;
+  opacity: 1;
+  color: black;
+  opacity: 0.8;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body #second-sec #fall-title {
+  font-size: 5rem;
+}
+
+body #second-sec #fall-description {
+  font-size: 2rem;
+}
+
+@-webkit-keyframes flow {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(1.02);
+            transform: scale(1.02);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes flow {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(1.02);
+            transform: scale(1.02);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+/*# sourceMappingURL=index.css.map */

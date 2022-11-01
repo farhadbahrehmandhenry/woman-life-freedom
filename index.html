@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Mouse+Memoirs&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="index.css">
+  <title>IRAN</title>
+</head>
+
+<body>
+  <section class="landing-page" id="first-sec">
+    <div class="cloud-circle1"></div>
+    <svg width="0" height="0">
+      <filter class="filter">
+        <feTurbulence type="fractalNoise" baseFrequency=".01" numOctaves="10" />
+        <feDisplacementMap in="SourceGraphic" scale="180" />
+      </filter>
+    </svg>
+
+    <div class="cloud-circle2"></div>
+    <svg width="0" height="0">
+      <filter id="filter">
+        <feTurbulence type="fractalNoise" baseFrequency=".01" numOctaves="10" />
+        <feDisplacementMap in="SourceGraphic" scale="180" />
+      </filter>
+    </svg>
+
+    <div class="cloud-circle3"></div>
+    <svg width="0" height="0">
+      <filter id="filter">
+        <feTurbulence type="fractalNoise" baseFrequency=".01" numOctaves="10" />
+        <feDisplacementMap in="SourceGraphic" scale="180" />
+      </filter>
+    </svg>
+    <div id="sun"></div>
+  </section>
+
+  <section class="texts">
+    <p id="first-paragraph">Every nation of the earth will have its rises and falls. </p>
+    <h3 id="iran-title">IRAN</h3>
+    <p id="second-paragraph">
+      This old country has been experiencing dark years, but like the sun after the dark, it'll rise and shine
+      again.
+    </p>
+  </section>
+  <section id="second-sec">
+    <h3 id="fall-title">PART 1</h3>
+    <h4 id="fall-description">We rise...</h4>
+  </section>
+
+  <!-- scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
+  <script src="index.js"></script>
+</body>
+
+</html>
