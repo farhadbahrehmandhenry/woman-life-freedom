@@ -45,8 +45,8 @@ body {
       filter: url(#filter);
       box-shadow: 20rem 20rem 5rem 0px rgb(168, 167, 167);
       position: fixed;
-      top: -25%;
-      left: 20%;
+      top: -20%;
+      left: 30%;
       z-index: 10;
     }
 
@@ -58,38 +58,9 @@ body {
       box-shadow: 25rem 25rem 5rem 0px rgb(156, 151, 151);
       position: fixed;
       top: -60%;
-      left: 30%;
+      left: 25%;
       z-index: 7;
     }
-
-    // #first-paragraph, #second-paragraph {
-    //   position: fixed;
-    //   left: 50%;
-    //   transform: translateX(-50%);
-    //   font-size: 1rem;
-    //   text-align: center;
-    //   opacity: 0;
-    //   width: 100%;
-    //   z-index: 100;
-    // }
-
-    // #iran-title {
-    //   font-size: 15rem;
-    //   position: fixed;
-    //   top: 50%;
-    //   left: 50%;
-    //   transform: translate(-50%, -50%);
-    //   opacity: 0;
-    // }
-
-    // #first-paragraph {
-    //   top: 20%;
-    // }
-
-    // #second-paragraph {
-    //   bottom: 20%;
-    //   margin-top: 0.5rem;
-    // }
 
     #sun {
       position: fixed;
@@ -107,21 +78,13 @@ body {
     }
   }
 
-  .texts {
+  #section-two {
     position: relative;
     width: 100vw;
     height: 200vh;
-    // display: flex;
-    // justify-content: space-between;
-    // align-items: center;
-    // flex-direction: column;
-
     text-align: center;
 
     #first-paragraph, #second-paragraph {
-      // position: fixed;
-      // left: 50%;
-      // transform: translateX(-50%);
       font-size: 1rem;
       text-align: center;
       opacity: 0;
@@ -132,28 +95,15 @@ body {
 
     #iran-title {
       font-size: 15rem;
-      // position: fixed;
-      // top: 50%;
-      // left: 50%;
-      // transform: translate(-50%, -50%);
       opacity: 0;
     }
-
-    // #first-paragraph {
-    //   top: 20%;
-    // }
-
-    // #second-paragraph {
-    //   bottom: 20%;
-    //   margin-top: 0.5rem;
-    // }
   }
 
   section {
     height: 100vh;
   }
 
-  #second-sec {
+  #section-three {
     z-index: 20;
     opacity: 1;
     color: black;
@@ -162,13 +112,34 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    position: relative;
 
-    #fall-title {
-      font-size: 5rem;
+    #blood, #blood-cover {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 10rem;
+      height: 10rem;
     }
 
-    #fall-description {
+    #blood, #blood-cover {
+      background-color: red;
+    }
+    #blood-cover {
+      border-radius: 50%;
+      background-color: blue;
+    }
+
+    #part-one, #woman {
+      opacity: 0;
+    }
+
+    #part-one {
       font-size: 2rem;
+    }
+
+    #woman {
+      font-size: 5rem;
     }
   }
 }

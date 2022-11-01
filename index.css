@@ -56,8 +56,8 @@ body .landing-page .cloud-circle2 {
   -webkit-box-shadow: 20rem 20rem 5rem 0px #a8a7a7;
           box-shadow: 20rem 20rem 5rem 0px #a8a7a7;
   position: fixed;
-  top: -25%;
-  left: 20%;
+  top: -20%;
+  left: 30%;
   z-index: 10;
 }
 
@@ -71,7 +71,7 @@ body .landing-page .cloud-circle3 {
           box-shadow: 25rem 25rem 5rem 0px #9c9797;
   position: fixed;
   top: -60%;
-  left: 30%;
+  left: 25%;
   z-index: 7;
 }
 
@@ -91,14 +91,14 @@ body .landing-page #sun {
   opacity: 1;
 }
 
-body .texts {
+body #section-two {
   position: relative;
   width: 100vw;
   height: 200vh;
   text-align: center;
 }
 
-body .texts #first-paragraph, body .texts #second-paragraph {
+body #section-two #first-paragraph, body #section-two #second-paragraph {
   font-size: 1rem;
   text-align: center;
   opacity: 0;
@@ -107,7 +107,7 @@ body .texts #first-paragraph, body .texts #second-paragraph {
   margin-bottom: 2rem;
 }
 
-body .texts #iran-title {
+body #section-two #iran-title {
   font-size: 15rem;
   opacity: 0;
 }
@@ -116,7 +116,7 @@ body section {
   height: 100vh;
 }
 
-body #second-sec {
+body #section-three {
   z-index: 20;
   opacity: 1;
   color: black;
@@ -142,14 +142,36 @@ body #second-sec {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  position: relative;
 }
 
-body #second-sec #fall-title {
-  font-size: 5rem;
+body #section-three #blood, body #section-three #blood-cover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 10rem;
+  height: 10rem;
 }
 
-body #second-sec #fall-description {
+body #section-three #blood, body #section-three #blood-cover {
+  background-color: red;
+}
+
+body #section-three #blood-cover {
+  border-radius: 50%;
+  background-color: blue;
+}
+
+body #section-three #part-one, body #section-three #woman {
+  opacity: 0;
+}
+
+body #section-three #part-one {
   font-size: 2rem;
+}
+
+body #section-three #woman {
+  font-size: 5rem;
 }
 
 @-webkit-keyframes flow {
