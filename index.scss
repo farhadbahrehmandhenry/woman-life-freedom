@@ -20,13 +20,16 @@ body {
   overflow: scroll;
   overflow-x: hidden;
 
+  .dark {
+    background-color: black;
+  }
+
   .landing-page {
     @include flex;
     position: relative;
-    // height: 600vh;
     height: 100vh;
 
-    .cloud-circle1 {
+    .cloud-one {
       width: 30%;
       height: 30%;
       border-radius: 50%;
@@ -38,7 +41,7 @@ body {
       z-index: 5;
     }
   
-    .cloud-circle2 {
+    .cloud-two {
       width: 40%;
       height: 35%;
       border-radius: 50%;
@@ -50,7 +53,7 @@ body {
       z-index: 10;
     }
 
-    .cloud-circle3 {
+    .cloud-three {
       width: 35%;
       height: 55%;
       border-radius: 50%;
@@ -101,6 +104,17 @@ body {
 
   section {
     height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .story {
+    height: 50vh;
+  }
+
+  .dark {
+    background-color: black;
   }
 
   #section-three {
@@ -114,20 +128,37 @@ body {
     align-items: center;
     position: relative;
 
-    #blood, #blood-cover {
+    #blood-1, #blood-2, #blood-3, #blood-4 {
       position: absolute;
       top: 0;
-      left: 0;
       width: 10rem;
-      height: 10rem;
+      height: 0;
+      background-color: #CC1100;
     }
 
-    #blood, #blood-cover {
-      background-color: red;
+    #blood-1 {
+      left: 2rem;
+      border-bottom-left-radius: 3rem;
     }
-    #blood-cover {
-      border-radius: 50%;
-      background-color: blue;
+
+    #blood-2 {
+      left: 11rem;
+      border-bottom-left-radius: 2.5rem;
+      border-bottom-right-radius: 3rem;
+    }
+
+    #blood-3 {
+      left: 6rem;
+      width: 1.5rem;
+      border-bottom-left-radius: 2.5rem;
+      border-bottom-right-radius: 3rem;
+    }
+
+    #blood-4 {
+      left: 14rem;
+      width: 1rem;
+      border-bottom-left-radius: 2.5rem;
+      border-bottom-right-radius: 3rem;
     }
 
     #part-one, #woman {
@@ -141,6 +172,86 @@ body {
     #woman {
       font-size: 5rem;
     }
+  }
+
+  #section-four {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    padding-top: 20rem;
+
+    #story-one-title {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 1.5rem;
+      
+      .hide {
+        display: none;
+      }
+  
+      .changable {
+        height: 2rem;
+        width: 8rem;
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-direction: column;
+        overflow: hidden;
+
+        #happy, #desperate {
+          height: 100%;
+          width: auto;
+        }
+  
+        #happy {
+          transition: display 1s ease;
+        }  
+
+        .move {
+          display: none;
+        }
+
+        .blink {
+          opacity: 0;
+        }
+
+        #desperate {
+          color: red;
+          font-weight: bold;
+        }
+      }
+    }
+
+    .item {
+      opacity: 0;
+    }
+
+    // #positive-1 {
+    //   top: 10%;
+    // }
+
+    // #positive-2 {
+    //   top: 13%;
+    // }
+
+    // #positive-3 {
+    //   top: 18%;
+    // }
+    // #negative-1 {
+    //   top: 22%;
+    // }
+  }
+
+  #positive-1, #positive-2, #positive-3, #negative-1, #negative-2, #negative-3, #negative-4, #negative-5, #negative-6, #negative-7, #negative-8 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
 

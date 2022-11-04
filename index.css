@@ -15,6 +15,10 @@ body {
   overflow-x: hidden;
 }
 
+body .dark {
+  background-color: black;
+}
+
 body .landing-page {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -33,7 +37,7 @@ body .landing-page {
   height: 100vh;
 }
 
-body .landing-page .cloud-circle1 {
+body .landing-page .cloud-one {
   width: 30%;
   height: 30%;
   border-radius: 50%;
@@ -47,7 +51,7 @@ body .landing-page .cloud-circle1 {
   z-index: 5;
 }
 
-body .landing-page .cloud-circle2 {
+body .landing-page .cloud-two {
   width: 40%;
   height: 35%;
   border-radius: 50%;
@@ -61,7 +65,7 @@ body .landing-page .cloud-circle2 {
   z-index: 10;
 }
 
-body .landing-page .cloud-circle3 {
+body .landing-page .cloud-three {
   width: 35%;
   height: 55%;
   border-radius: 50%;
@@ -114,6 +118,23 @@ body #section-two #iran-title {
 
 body section {
   height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .story {
+  height: 50vh;
+}
+
+body .dark {
+  background-color: black;
 }
 
 body #section-three {
@@ -145,21 +166,37 @@ body #section-three {
   position: relative;
 }
 
-body #section-three #blood, body #section-three #blood-cover {
+body #section-three #blood-1, body #section-three #blood-2, body #section-three #blood-3, body #section-three #blood-4 {
   position: absolute;
   top: 0;
-  left: 0;
   width: 10rem;
-  height: 10rem;
+  height: 0;
+  background-color: #CC1100;
 }
 
-body #section-three #blood, body #section-three #blood-cover {
-  background-color: red;
+body #section-three #blood-1 {
+  left: 2rem;
+  border-bottom-left-radius: 3rem;
 }
 
-body #section-three #blood-cover {
-  border-radius: 50%;
-  background-color: blue;
+body #section-three #blood-2 {
+  left: 11rem;
+  border-bottom-left-radius: 2.5rem;
+  border-bottom-right-radius: 3rem;
+}
+
+body #section-three #blood-3 {
+  left: 6rem;
+  width: 1.5rem;
+  border-bottom-left-radius: 2.5rem;
+  border-bottom-right-radius: 3rem;
+}
+
+body #section-three #blood-4 {
+  left: 14rem;
+  width: 1rem;
+  border-bottom-left-radius: 2.5rem;
+  border-bottom-right-radius: 3rem;
 }
 
 body #section-three #part-one, body #section-three #woman {
@@ -172,6 +209,102 @@ body #section-three #part-one {
 
 body #section-three #woman {
   font-size: 5rem;
+}
+
+body #section-four {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: relative;
+  padding-top: 20rem;
+}
+
+body #section-four #story-one-title {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 1.5rem;
+}
+
+body #section-four #story-one-title .hide {
+  display: none;
+}
+
+body #section-four #story-one-title .changable {
+  height: 2rem;
+  width: 8rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  overflow: hidden;
+}
+
+body #section-four #story-one-title .changable #happy, body #section-four #story-one-title .changable #desperate {
+  height: 100%;
+  width: auto;
+}
+
+body #section-four #story-one-title .changable #happy {
+  -webkit-transition: display 1s ease;
+  transition: display 1s ease;
+}
+
+body #section-four #story-one-title .changable .move {
+  display: none;
+}
+
+body #section-four #story-one-title .changable .blink {
+  opacity: 0;
+}
+
+body #section-four #story-one-title .changable #desperate {
+  color: red;
+  font-weight: bold;
+}
+
+body #section-four .item {
+  opacity: 0;
+}
+
+body #positive-1, body #positive-2, body #positive-3, body #negative-1, body #negative-2, body #negative-3, body #negative-4, body #negative-5, body #negative-6, body #negative-7, body #negative-8 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 @-webkit-keyframes flow {
