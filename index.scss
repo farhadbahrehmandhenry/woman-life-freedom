@@ -17,7 +17,6 @@
 body {
   width: 100vw;
   height: 100vh;
-  overflow: scroll;
   overflow-x: hidden;
 
   .dark {
@@ -45,11 +44,10 @@ body {
     
     .title {
       font-weight: bold;
-      font-size: 20vw;
+      font-size: 7rem;
       margin: 0;
       filter: url(#goo);
       position: relative;
-      letter-spacing: -1.5rem;
       color: #CC1100;
       text-transform: uppercase;
     }
@@ -113,13 +111,14 @@ body {
 
     .text {
       opacity: 0;
-      font-size: 2rem;
+      font-size: 1.5rem;
     }
   }
 
   #cloudy-sky {
     background-color: #CC1100;
     position: relative;
+    overflow-x: hidden;
 
     .cloud1, .cloud2, .cloud3 {
       position: absolute;
@@ -127,20 +126,20 @@ body {
     }
 
     .cloud1 {
-      width: 80vh;
-      height: 60vh;
+      width: 80vw;
+      height: 40vh;
       left: 5rem;
     }
 
     .cloud2 {
-      width: 80vh;
+      width: 60vw;
       height: 50vh;
       top: 2rem;
     }
 
     .cloud3 {
-      width: 100vh;
-      height: 100vh;
+      width: 80vw;
+      height: 60vh;
       right: 5rem;
       z-index: 100;
     }
@@ -218,20 +217,20 @@ body {
     }
 
     #part-one, #part-two {
-      font-size: 2rem;
+      font-size: 1.5rem;
     }
 
     #woman, #life {
-      font-size: 5rem;
+      font-size: 3rem;
       z-index: 1;
     }
 
     .life-image {
       position: absolute;
-      bottom: 3rem;
+      bottom: 15%;
       left: 3rem;
-      width: 15rem;
-      height: 15rem;
+      width: 5rem;
+      height: 10rem;
       opacity: 0;
       z-index: 0;
     }
@@ -260,11 +259,11 @@ body {
       position: fixed;
       top: 50%;
       left: 50%;
-      transform: translateX(-50%);
+      transform: translate(-50%, -50%);
     }
 
     #story-one-blood1, #story-one-blood2 {
-      width: 50vh;
+      width: 50vw;
       height: 50vh;
       position: absolute;
       z-index: 0;
@@ -274,46 +273,54 @@ body {
     }
 
     #story-one-blood1 {
-      // top: 20%;
       right: 1rem;
     }
 
     #story-one-blood2{
-      // bottom: 10%;
       opacity: 0;
       left: 1rem;
     }
 
-    .story-two-doll1, .story-two-doll2 {
-      width: 20vh;
+    .doll {
+      position: absolute;
+      width: 30vh;
       height: 30vh;
-      // opacity: 0;
-    }
-
-    .story-two-doll1, .story-two-doll2, .story-two-doll3, .story-two-saten1, .story-two-saten2, .story-two-saten3 {
-      width: 20vh;
-      height: 30vh;
+      left: 10%;
+      opacity: 0;
     }
 
     .story-two-doll1 {
-      top: 0ex;
-      position: absolute;
+      top: 10%;
     }
 
     .story-two-doll2 {
-      position: absolute;
-      top: 10%;
+      top: 40%;
+    }
+
+
+    .story-two-doll3 {
+      top: 70%;
     }
 
     .saten {
       width: 10vh;
       height: 20vh;
       opacity: 0.7;
+      position: absolute;
+      right: 10%;
+      z-index: 0;
+    }
+
+    .story-two-saten2 {
+      top: 70%;
     }
 
     .story-two-saten7 {
-      opacity: 1;
+      top: 120%;
+      opacity: 0;
       width: 17vh;
+      z-index: 1;
+      right: calc(10% - 3vh);
     }
   }
 }

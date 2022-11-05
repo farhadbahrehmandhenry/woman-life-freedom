@@ -66,6 +66,8 @@ var life8 = document.querySelector('.life8');
 var life9 = document.querySelector('.life9');
 var storyTwoDoll1 = document.querySelector('.story-two-doll1');
 var storyTwoDoll2 = document.querySelector('.story-two-doll2');
+var storyTwoDoll3 = document.querySelector('.story-two-doll3');
+var storyTwoSaten = document.querySelector('.story-two-saten7');
 
 // animations
 var cloud1Move = gsap.to(cloud1, { scale: 1.1, duration: 9, delay: 2 });
@@ -232,8 +234,6 @@ const womanTl = gsap.timeline({
     start: "top 40%",
     end: "bottom 80%",
     scrub: 1,
-    markers: true
-
   }
 });
 
@@ -241,7 +241,6 @@ womanTl
   .to(woman1, { opacity: 1, duration: 2 })
   .to(woman1, { opacity: 0, duration: 2 })
   .to(woman2, { opacity: 1, duration: 2 })
-  // .to(storyOneBlood1, { opacity: 1, duration: 2 })
   .to(woman2, { opacity: 0, duration: 2 })
   .to(woman3, { opacity: 1, duration: 2 })
   .to(woman3, { opacity: 0, duration: 2 })
@@ -312,26 +311,34 @@ lifeTl
   .to(life1, { opacity: 1, duration: 2 })
   .to(life1, { opacity: 0, duration: 2 })
   .to(life2, { opacity: 1, duration: 2 })
+  .to(storyTwoDoll1, { opacity: 1, duration: 2 })
   .to(life2, { opacity: 0, duration: 2 })
   .to(life3, { opacity: 1, duration: 2 })
+  .to(storyTwoDoll1, { opacity: 0, duration: 2 })
   .to(life3, { opacity: 0, duration: 2 })
   .to(life4, { opacity: 1, duration: 2 })
+  .to(storyTwoDoll2, { opacity: 0.7, duration: 2 })
   .to(life4, { opacity: 0, duration: 2 })
   .to(life5, { opacity: 1, duration: 2 })
   .to(life5, { opacity: 0, duration: 2 })
+  .to(storyTwoDoll2, { opacity: 0, duration: 2 })
   .to(life6, { opacity: 1, duration: 2 })
   .to(life6, { opacity: 0, duration: 2 })
+  .to(storyTwoSaten, { opacity: 1, duration: 1 })
+  .to(storyTwoDoll3, { opacity: 0.7, duration: 2 })
   .to(life7, { opacity: 1, duration: 2 })
   .to(life7, { opacity: 0, duration: 2 })
   .to(life8, { opacity: 1, duration: 2 })
   .to(life8, { opacity: 0, duration: 2 })
+  .to(storyTwoDoll3, { opacity: 0, duration: 2 })
   .to(life9, { opacity: 1, duration: 2 })
   .to(life9, { opacity: 0, duration: 2 })
 
 gsap.to(".parallax-bg", {
   scrollTrigger: {
     trigger: partTwoTexts,
-    scrub: true
+    start: "50% center",
+    scrub: true,
   },
   y: (i, target) => -ScrollTrigger.maxScroll(window) * target.dataset.speed,
   ease: "none"
