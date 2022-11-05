@@ -24,46 +24,131 @@ body {
     background-color: black;
   }
 
+  .story {
+    height: 50vh;
+  }
+
+  section {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #blood-drop {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+    z-index: 0;
+    
+    .title {
+      font-weight: bold;
+      font-size: 20vw;
+      margin: 0;
+      filter: url(#goo);
+      position: relative;
+      letter-spacing: -1.5rem;
+      color: #CC1100;
+      text-transform: uppercase;
+    }
+    
+    .drop {
+      width: .1em; 
+      height: .1em;
+      border-radius: 0 100% 100% 100%;
+      background-color: #CC1100;
+      position: absolute;
+      top: 50%;
+      animation: drop 3s infinite both;
+    
+      &:nth-child(1) {
+        left: 20%;
+      }
+    
+      &:nth-child(2) {
+        left: 45%;
+        animation-delay: -.4s;
+      }
+    
+      &:nth-child(3) {
+        left: 55%;
+        animation-delay: -1.5s;
+      }
+    
+      &:nth-child(4) {
+        left: 82%;
+        animation-delay: -.8s;
+      }
+    
+      &:nth-child(5) {
+        left: 95%;
+        animation-delay: -1.3s;
+      }
+    }
+    
+    @keyframes drop {
+      0% {
+        transform: translateY(0) scaleX(.85) rotate(45deg);
+        animation-timing-function: ease-out;
+      }
+      60% {
+        transform: translateY(120%) scaleX(.85) rotate(45deg);
+        animation-timing-function: ease-in;
+      }
+      80%, 100% {
+        transform: translateY(60vh) scaleX(.85) rotate(45deg);
+      }
+    }
+  }
+
+  #flood {
+    background-color: #CC1100;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    .text {
+      opacity: 0;
+      font-size: 2rem;
+    }
+  }
+
+  #cloudy-sky {
+    background-color: #CC1100;
+    position: relative;
+
+    .cloud1, .cloud2, .cloud3 {
+      position: absolute;
+      opacity: 0;
+    }
+
+    .cloud1 {
+      width: 80vh;
+      height: 60vh;
+      left: 5rem;
+    }
+
+    .cloud2 {
+      width: 80vh;
+      height: 50vh;
+      top: 2rem;
+    }
+
+    .cloud3 {
+      width: 100vh;
+      height: 100vh;
+      right: 5rem;
+      z-index: 100;
+    }
+  }
   .landing-page {
     @include flex;
     position: relative;
     height: 100vh;
-
-    .cloud-one {
-      width: 30%;
-      height: 30%;
-      border-radius: 50%;
-      filter: url(#filter);
-      box-shadow: 15rem 15rem 6rem 0px rgb(128, 127, 127);
-      position: fixed;
-      top: -20%;
-      left: 0;
-      z-index: 5;
-    }
-  
-    .cloud-two {
-      width: 40%;
-      height: 35%;
-      border-radius: 50%;
-      filter: url(#filter);
-      box-shadow: 20rem 20rem 5rem 0px rgb(168, 167, 167);
-      position: fixed;
-      top: -20%;
-      left: 30%;
-      z-index: 10;
-    }
-
-    .cloud-three {
-      width: 35%;
-      height: 55%;
-      border-radius: 50%;
-      filter: url(#filter);
-      box-shadow: 25rem 25rem 5rem 0px rgb(156, 151, 151);
-      position: fixed;
-      top: -60%;
-      left: 25%;
-      z-index: 7;
-    }
 
     #sun {
       position: fixed;
@@ -81,51 +166,17 @@ body {
     }
   }
 
-  #section-two {
-    position: relative;
-    width: 100vw;
-    height: 200vh;
-    text-align: center;
-
-    #first-paragraph, #second-paragraph {
-      font-size: 1rem;
-      text-align: center;
-      opacity: 0;
-      width: 100%;
-      z-index: 100;
-      margin-bottom: 2rem;
-    }
-
-    #iran-title {
-      font-size: 15rem;
-      opacity: 0;
-    }
-  }
-
-  section {
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .story {
-    height: 50vh;
-  }
-
-  .dark {
-    background-color: black;
-  }
-
-  #section-three {
+  #section-three, #section-four {
     z-index: 20;
     opacity: 1;
-    color: black;
-    opacity: 0.8;
+    color: whitesmoke;
     @include flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    position: relative;
+    background-color: #333636;
+    z-index: 0;
     position: relative;
 
     #blood-1, #blood-2, #blood-3, #blood-4 {
@@ -133,7 +184,8 @@ body {
       top: 0;
       width: 10rem;
       height: 0;
-      background-color: #CC1100;
+      background-color: #9E0103;
+      z-index: 100;
     }
 
     #blood-1 {
@@ -161,97 +213,108 @@ body {
       border-bottom-right-radius: 3rem;
     }
 
-    #part-one, #woman {
+    #part-one, #woman, #part-two, #life {
       opacity: 0;
     }
 
-    #part-one {
+    #part-one, #part-two {
       font-size: 2rem;
     }
 
-    #woman {
+    #woman, #life {
       font-size: 5rem;
+      z-index: 1;
+    }
+
+    .life-image {
+      position: absolute;
+      bottom: 3rem;
+      left: 3rem;
+      width: 15rem;
+      height: 15rem;
+      opacity: 0;
+      z-index: 0;
     }
   }
 
-  #section-four {
+  #part-one-texts, #part-two-texts {
+    z-index: 1;
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-around;
     align-items: center;
     flex-direction: column;
+    height: 200vh;
+    color: whitesmoke;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    background-color: #333636;
     position: relative;
-    padding-top: 20rem;
-
-    #story-one-title {
-      width: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-size: 1.5rem;
-      
-      .hide {
-        display: none;
-      }
-  
-      .changable {
-        height: 2rem;
-        width: 8rem;
-        padding-left: 0.5rem;
-        padding-right: 0.5rem;
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-        flex-direction: column;
-        overflow: hidden;
-
-        #happy, #desperate {
-          height: 100%;
-          width: auto;
-        }
-  
-        #happy {
-          transition: display 1s ease;
-        }  
-
-        .move {
-          display: none;
-        }
-
-        .blink {
-          opacity: 0;
-        }
-
-        #desperate {
-          color: red;
-          font-weight: bold;
-        }
-      }
-    }
-
-    .item {
+    padding-right: 1rem;
+    padding-left: 1rem;
+    
+    .text {
       opacity: 0;
+      font-size: 1rem;
+      text-align: center;
+      z-index: 1;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translateX(-50%);
     }
 
-    // #positive-1 {
-    //   top: 10%;
-    // }
+    #story-one-blood1, #story-one-blood2 {
+      width: 50vh;
+      height: 50vh;
+      position: absolute;
+      z-index: 0;
+      opacity: 1;
+      bottom: 10%;
 
-    // #positive-2 {
-    //   top: 13%;
-    // }
+    }
 
-    // #positive-3 {
-    //   top: 18%;
-    // }
-    // #negative-1 {
-    //   top: 22%;
-    // }
-  }
+    #story-one-blood1 {
+      // top: 20%;
+      right: 1rem;
+    }
 
-  #positive-1, #positive-2, #positive-3, #negative-1, #negative-2, #negative-3, #negative-4, #negative-5, #negative-6, #negative-7, #negative-8 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    #story-one-blood2{
+      // bottom: 10%;
+      opacity: 0;
+      left: 1rem;
+    }
+
+    .story-two-doll1, .story-two-doll2 {
+      width: 20vh;
+      height: 30vh;
+      // opacity: 0;
+    }
+
+    .story-two-doll1, .story-two-doll2, .story-two-doll3, .story-two-saten1, .story-two-saten2, .story-two-saten3 {
+      width: 20vh;
+      height: 30vh;
+    }
+
+    .story-two-doll1 {
+      top: 0ex;
+      position: absolute;
+    }
+
+    .story-two-doll2 {
+      position: absolute;
+      top: 10%;
+    }
+
+    .saten {
+      width: 10vh;
+      height: 20vh;
+      opacity: 0.7;
+    }
+
+    .story-two-saten7 {
+      opacity: 1;
+      width: 17vh;
+    }
   }
 }
 
