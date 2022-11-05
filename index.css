@@ -144,9 +144,8 @@ body #flood {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -154,11 +153,15 @@ body #flood {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  position: relative;
+  padding-right: 1rem;
+  padding-left: 1rem;
 }
 
 body #flood .text {
   opacity: 0;
   font-size: 1.5rem;
+  position: absolute;
 }
 
 body #cloudy-sky {
@@ -225,8 +228,7 @@ body .landing-page #sun {
   opacity: 1;
 }
 
-body #section-three, body #section-four {
-  z-index: 20;
+body #section-three, body #section-four, body #section-five {
   opacity: 1;
   color: whitesmoke;
   display: -webkit-box;
@@ -256,7 +258,7 @@ body #section-three, body #section-four {
   position: relative;
 }
 
-body #section-three #blood-1, body #section-three #blood-2, body #section-three #blood-3, body #section-three #blood-4, body #section-four #blood-1, body #section-four #blood-2, body #section-four #blood-3, body #section-four #blood-4 {
+body #section-three #blood-1, body #section-three #blood-2, body #section-three #blood-3, body #section-three #blood-4, body #section-four #blood-1, body #section-four #blood-2, body #section-four #blood-3, body #section-four #blood-4, body #section-five #blood-1, body #section-five #blood-2, body #section-five #blood-3, body #section-five #blood-4 {
   position: absolute;
   top: 0;
   width: 10rem;
@@ -265,55 +267,57 @@ body #section-three #blood-1, body #section-three #blood-2, body #section-three 
   z-index: 100;
 }
 
-body #section-three #blood-1, body #section-four #blood-1 {
+body #section-three #blood-1, body #section-four #blood-1, body #section-five #blood-1 {
   left: 2rem;
   border-bottom-left-radius: 3rem;
 }
 
-body #section-three #blood-2, body #section-four #blood-2 {
+body #section-three #blood-2, body #section-four #blood-2, body #section-five #blood-2 {
   left: 11rem;
   border-bottom-left-radius: 2.5rem;
   border-bottom-right-radius: 3rem;
 }
 
-body #section-three #blood-3, body #section-four #blood-3 {
+body #section-three #blood-3, body #section-four #blood-3, body #section-five #blood-3 {
   left: 6rem;
   width: 1.5rem;
   border-bottom-left-radius: 2.5rem;
   border-bottom-right-radius: 3rem;
+  z-index: 0;
 }
 
-body #section-three #blood-4, body #section-four #blood-4 {
+body #section-three #blood-4, body #section-four #blood-4, body #section-five #blood-4 {
   left: 14rem;
   width: 1rem;
   border-bottom-left-radius: 2.5rem;
   border-bottom-right-radius: 3rem;
+  z-index: 0;
 }
 
-body #section-three #part-one, body #section-three #woman, body #section-three #part-two, body #section-three #life, body #section-four #part-one, body #section-four #woman, body #section-four #part-two, body #section-four #life {
+body #section-three #part-one, body #section-three #woman, body #section-three #part-two, body #section-three #life, body #section-three #part-three, body #section-three #freedom, body #section-four #part-one, body #section-four #woman, body #section-four #part-two, body #section-four #life, body #section-four #part-three, body #section-four #freedom, body #section-five #part-one, body #section-five #woman, body #section-five #part-two, body #section-five #life, body #section-five #part-three, body #section-five #freedom {
   opacity: 0;
 }
 
-body #section-three #part-one, body #section-three #part-two, body #section-four #part-one, body #section-four #part-two {
+body #section-three #part-one, body #section-three #part-two, body #section-three #part-three, body #section-four #part-one, body #section-four #part-two, body #section-four #part-three, body #section-five #part-one, body #section-five #part-two, body #section-five #part-three {
   font-size: 1.5rem;
 }
 
-body #section-three #woman, body #section-three #life, body #section-four #woman, body #section-four #life {
+body #section-three #woman, body #section-three #life, body #section-three #freedom, body #section-four #woman, body #section-four #life, body #section-four #freedom, body #section-five #woman, body #section-five #life, body #section-five #freedom {
   font-size: 3rem;
   z-index: 1;
 }
 
-body #section-three .life-image, body #section-four .life-image {
+body #section-three .life-image, body #section-four .life-image, body #section-five .life-image {
   position: absolute;
   bottom: 15%;
-  left: 3rem;
+  left: 5rem;
   width: 5rem;
   height: 10rem;
   opacity: 0;
   z-index: 0;
 }
 
-body #part-one-texts, body #part-two-texts {
+body #part-one-texts, body #part-two-texts, body #part-three-texts {
   z-index: 1;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -337,7 +341,7 @@ body #part-one-texts, body #part-two-texts {
   padding-left: 1rem;
 }
 
-body #part-one-texts .text, body #part-two-texts .text {
+body #part-one-texts .text, body #part-two-texts .text, body #part-three-texts .text {
   opacity: 0;
   font-size: 1rem;
   text-align: center;
@@ -349,7 +353,7 @@ body #part-one-texts .text, body #part-two-texts .text {
           transform: translate(-50%, -50%);
 }
 
-body #part-one-texts #story-one-blood1, body #part-one-texts #story-one-blood2, body #part-two-texts #story-one-blood1, body #part-two-texts #story-one-blood2 {
+body #part-one-texts #story-one-blood1, body #part-one-texts #story-one-blood2, body #part-two-texts #story-one-blood1, body #part-two-texts #story-one-blood2, body #part-three-texts #story-one-blood1, body #part-three-texts #story-one-blood2 {
   width: 50vw;
   height: 50vh;
   position: absolute;
@@ -358,16 +362,16 @@ body #part-one-texts #story-one-blood1, body #part-one-texts #story-one-blood2, 
   bottom: 10%;
 }
 
-body #part-one-texts #story-one-blood1, body #part-two-texts #story-one-blood1 {
+body #part-one-texts #story-one-blood1, body #part-two-texts #story-one-blood1, body #part-three-texts #story-one-blood1 {
   right: 1rem;
 }
 
-body #part-one-texts #story-one-blood2, body #part-two-texts #story-one-blood2 {
+body #part-one-texts #story-one-blood2, body #part-two-texts #story-one-blood2, body #part-three-texts #story-one-blood2 {
   opacity: 0;
   left: 1rem;
 }
 
-body #part-one-texts .doll, body #part-two-texts .doll {
+body #part-one-texts .doll, body #part-two-texts .doll, body #part-three-texts .doll {
   position: absolute;
   width: 30vh;
   height: 30vh;
@@ -375,19 +379,19 @@ body #part-one-texts .doll, body #part-two-texts .doll {
   opacity: 0;
 }
 
-body #part-one-texts .story-two-doll1, body #part-two-texts .story-two-doll1 {
+body #part-one-texts .story-two-doll1, body #part-two-texts .story-two-doll1, body #part-three-texts .story-two-doll1 {
   top: 10%;
 }
 
-body #part-one-texts .story-two-doll2, body #part-two-texts .story-two-doll2 {
+body #part-one-texts .story-two-doll2, body #part-two-texts .story-two-doll2, body #part-three-texts .story-two-doll2 {
   top: 40%;
 }
 
-body #part-one-texts .story-two-doll3, body #part-two-texts .story-two-doll3 {
+body #part-one-texts .story-two-doll3, body #part-two-texts .story-two-doll3, body #part-three-texts .story-two-doll3 {
   top: 70%;
 }
 
-body #part-one-texts .saten, body #part-two-texts .saten {
+body #part-one-texts .saten, body #part-two-texts .saten, body #part-three-texts .saten {
   width: 10vh;
   height: 20vh;
   opacity: 0.7;
@@ -396,16 +400,63 @@ body #part-one-texts .saten, body #part-two-texts .saten {
   z-index: 0;
 }
 
-body #part-one-texts .story-two-saten2, body #part-two-texts .story-two-saten2 {
+body #part-one-texts .story-two-saten2, body #part-two-texts .story-two-saten2, body #part-three-texts .story-two-saten2 {
   top: 70%;
 }
 
-body #part-one-texts .story-two-saten7, body #part-two-texts .story-two-saten7 {
-  top: 120%;
+body #part-one-texts .story-two-saten7, body #part-two-texts .story-two-saten7, body #part-three-texts .story-two-saten7 {
+  top: 70%;
   opacity: 0;
   width: 17vh;
   z-index: 1;
   right: calc(10% - 3vh);
+}
+
+body #section-five {
+  background-color: #CC1100;
+}
+
+body #part-three-texts {
+  background-color: #CC1100;
+  position: relative;
+  max-width: 100vw;
+}
+
+body #part-three-texts .story-three-cage {
+  width: 10rem;
+  height: 15rem;
+  position: absolute;
+  top: -15%;
+  left: 2rem;
+  opacity: 0;
+  z-index: 0;
+}
+
+body #part-three-texts .bird {
+  width: 5rem;
+  height: 5rem;
+  position: absolute;
+  opacity: 0;
+}
+
+body #part-three-texts .story-three-bird1 {
+  top: -12%;
+  left: 20%;
+}
+
+body #part-three-texts .story-three-bird2 {
+  top: -14%;
+  left: 40%;
+}
+
+body #part-three-texts .story-three-bird3 {
+  top: -16%;
+  left: 60%;
+}
+
+body #part-three-texts .story-three-bird4 {
+  top: -18%;
+  left: 80%;
 }
 
 @-webkit-keyframes flow {

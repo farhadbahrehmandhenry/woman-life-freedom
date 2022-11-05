@@ -69,6 +69,16 @@ var storyTwoDoll2 = document.querySelector('.story-two-doll2');
 var storyTwoDoll3 = document.querySelector('.story-two-doll3');
 var storyTwoSaten = document.querySelector('.story-two-saten7');
 
+// section five
+var sectionFive = document.getElementById('section-five');
+var sectionFiveText = document.getElementById('part-three');
+var freedom = document.getElementById('freedom');
+var cage = document.querySelector('.story-three-cage');
+var bird1 = document.querySelector('.story-three-bird1');
+var bird2 = document.querySelector('.story-three-bird2');
+var bird3 = document.querySelector('.story-three-bird3');
+var bird4 = document.querySelector('.story-three-bird4');
+
 // animations
 var cloud1Move = gsap.to(cloud1, { scale: 1.1, duration: 9, delay: 2 });
 var cloud2Move = gsap.to(cloud2, { scale: 1.1, duration: 7, delay: 5 });
@@ -288,7 +298,8 @@ gsap.to(life, {
 
 gsap.to(lifeImage, {
   opacity: 0.9,
-  scale: 1.2,
+  scale: 1.4,
+  x: "80%",
   duration: 2,
   scrollTrigger: {
     trigger: sectionFour,
@@ -337,9 +348,49 @@ lifeTl
 gsap.to(".parallax-bg", {
   scrollTrigger: {
     trigger: partTwoTexts,
-    start: "50% center",
+    start: "60% center",
     scrub: true,
   },
   y: (i, target) => -ScrollTrigger.maxScroll(window) * target.dataset.speed,
   ease: "none"
 });
+
+gsap.to(sectionFiveText, {
+  opacity: 0.9,
+  duration: 2,
+  scrollTrigger: {
+    trigger: sectionFive,
+    start: "25% center",
+    end: "25% 25%",
+    scrub: 3,
+  }
+});
+
+gsap.to(freedom, {
+  opacity: 0.9,
+  scale: 1.2,
+  duration: 2,
+  scrollTrigger: {
+    trigger: sectionFive,
+    start: "35% center",
+    end: "35% 25%",
+    scrub: 3,
+  }
+});
+
+const cageTl = gsap.timeline({
+  scrollTrigger: {
+    trigger: sectionFive,
+    start: "bottom bottom",
+    end: "bottom 80%",
+    scrub: 1,
+    markers: true
+  }
+});
+
+cageTl
+  .to(cage, { opacity: 1, duration: 1 })
+  .to(bird1, { opacity: 1, duration: 1 })
+  .to(bird2, { opacity: 1, duration: 1 })
+  .to(bird3, { opacity: 1, duration: 1 })
+  .to(bird4, { opacity: 1, duration: 1 })
