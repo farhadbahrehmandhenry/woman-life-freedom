@@ -79,6 +79,32 @@ var bird2 = document.querySelector('.story-three-bird2');
 var bird3 = document.querySelector('.story-three-bird3');
 var bird4 = document.querySelector('.story-three-bird4');
 
+var partThreeTexts = document.getElementById('part-three-texts');
+var freedom1 = document.querySelector('.freedom1');
+var freedom2 = document.querySelector('.freedom2');
+var freedom3 = document.querySelector('.freedom3');
+var freedom4 = document.querySelector('.freedom4');
+var freedom5 = document.querySelector('.freedom5');
+var freedom6 = document.querySelector('.freedom6');
+var freedom7 = document.querySelector('.freedom7');
+var freedom8 = document.querySelector('.freedom8');
+
+var gun = document.querySelector('.story-three-gun');
+var bullet1 = document.querySelector('.story-three-bullet1');
+var bullet2 = document.querySelector('.story-three-bullet2');
+var bullet3 = document.querySelector('.story-three-bullet3');
+var bullet4 = document.querySelector('.story-three-bullet4');
+var bullet5 = document.querySelector('.story-three-bullet5');
+
+// section six
+var sectionSix = document.getElementById('section-six');
+var sectionSixText = document.getElementById('part-four');
+var womanLifeFreedom = document.getElementById('woman-life-freedom');
+var impact1 = document.querySelector('.story-three-impact1');
+var impact2 = document.querySelector('.story-three-impact2');
+var impact3 = document.querySelector('.story-three-impact3');
+
+
 // animations
 var cloud1Move = gsap.to(cloud1, { scale: 1.1, duration: 9, delay: 2 });
 var cloud2Move = gsap.to(cloud2, { scale: 1.1, duration: 7, delay: 5 });
@@ -102,7 +128,7 @@ const winterTl = gsap.timeline({
   scrollTrigger: {
     trigger: flood,
     start: "top 50%",
-    end: "bottom 60%",
+    end: "bottom 80%",
     scrub: 1,
   }
 });
@@ -242,7 +268,7 @@ const womanTl = gsap.timeline({
   scrollTrigger: {
     trigger: partOneTexts,
     start: "top 40%",
-    end: "bottom 80%",
+    end: "bottom 40%",
     scrub: 1,
   }
 });
@@ -257,11 +283,11 @@ womanTl
   .to(woman4, { opacity: 1, duration: 2 })
   .to(woman4, { opacity: 0, duration: 2 })
   .to(woman5, { opacity: 1, duration: 2 })
+  .to(storyOneBlood2, { opacity: 1, duration: 2 })
   .to(woman5, { opacity: 0, duration: 2 })
   .to(woman6, { opacity: 1, duration: 2 })
   .to(woman6, { opacity: 0, duration: 2 })
   .to(woman7, { opacity: 1, duration: 2 })
-  .to(storyOneBlood2, { opacity: 1, duration: 2 })
   .to(woman7, { opacity: 0, duration: 2 })
 
 gsap.to(".parallax-blood", {
@@ -313,7 +339,7 @@ const lifeTl = gsap.timeline({
   scrollTrigger: {
     trigger: partTwoTexts,
     start: "top 40%",
-    end: "bottom 60%",
+    end: "bottom 40%",
     scrub: 1,
   }
 });
@@ -384,7 +410,6 @@ const cageTl = gsap.timeline({
     start: "bottom bottom",
     end: "bottom 80%",
     scrub: 1,
-    markers: true
   }
 });
 
@@ -394,3 +419,152 @@ cageTl
   .to(bird2, { opacity: 1, duration: 1 })
   .to(bird3, { opacity: 1, duration: 1 })
   .to(bird4, { opacity: 1, duration: 1 })
+
+const freedomTl = gsap.timeline({
+  scrollTrigger: {
+    trigger: partThreeTexts,
+    start: "top 40%",
+    end: "bottom 40%",
+    scrub: 1,
+  }
+});
+
+freedomTl
+  .to(freedom1, { opacity: 1, duration: 2 })
+  .to(freedom1, { opacity: 0, duration: 2 })
+  .to(freedom2, { opacity: 1, duration: 2 })
+  .to(freedom2, { opacity: 0, duration: 2 })
+  .to(freedom3, { opacity: 1, duration: 2 })
+  .to(freedom3, { opacity: 0, duration: 2 })
+  .to(freedom4, { opacity: 1, duration: 2 })
+  .to(freedom4, { opacity: 0, duration: 2 })
+  .to(freedom5, { opacity: 1, duration: 2 })
+  .to(freedom5, { opacity: 0, duration: 2 })
+  .to(freedom6, { opacity: 1, duration: 2 })
+  .to(freedom6, { opacity: 0, duration: 2 })
+  .to(freedom7, { opacity: 1, duration: 2 })
+  .to(freedom7, { opacity: 0, duration: 2 })
+  .to(freedom8, { opacity: 1, duration: 2 })
+  .to(freedom8, { opacity: 0, duration: 2 })
+
+// gsap.to(".parallax-gun", {
+//   scrollTrigger: {
+//     trigger: ".story-three-gun",
+//     scrub: true
+//   },
+//   y: (i, target) => -ScrollTrigger.maxScroll(window) * target.dataset.speed,
+//   ease: "none"
+// });
+
+// ScrollTrigger.create({
+//   trigger: partThreeTexts,
+//   duration: 2,
+//   start: "20% 30%",
+//   end: "bottom bottom",
+//   pin: gun,
+//   pinSpacing: false,
+//   scrub: 1,
+// });
+
+// ScrollTrigger.create({
+//   trigger: partThreeTexts,
+//   duration: 2,
+//   start: "20% 30%",
+//   end: "bottom bottom",
+//   pin: bullet,
+//   pinSpacing: false,
+//   scrub: 1,
+// });
+
+// const bulletTl = gsap.timeline({
+//   scrollTrigger: {
+//     trigger: gun,
+//     start: "top 30%",
+//     end: "top 20%",
+//     scrub: 4,
+//     markers: true
+//   }
+// });
+
+// freedomTl
+//   .to(bullet, { left: '30rem', duration: 6 })
+
+gsap.to(bullet1, {
+  left: '100%',
+  duration: 5,
+  scrollTrigger: {
+    trigger: gun,
+    start: "top 80%",
+    end: "top 20%",
+    scrub: 3,
+  }
+});
+
+gsap.to(bullet2, {
+  left: '100%',
+  duration: 5,
+  scrollTrigger: {
+    trigger: partThreeTexts,
+    start: "50% bottom",
+    end: "50% top",
+    scrub: 3,
+  }
+});
+
+
+gsap.to(bullet3, {
+  left: '100%',
+  duration: 5,
+  scrollTrigger: {
+    trigger: partThreeTexts,
+    start: "75% 95%",
+    end: "bottom 5%",
+    scrub: 3,
+  }
+});
+
+gsap.to(bullet4, {
+  left: '100%',
+  duration: 5,
+  scrollTrigger: {
+    trigger: partThreeTexts,
+    start: "80% 95%",
+    end: "bottom 5%",
+    scrub: 3,
+  }
+});
+
+gsap.to(bullet5, {
+  left: '100%',
+  duration: 5,
+  scrollTrigger: {
+    trigger: partThreeTexts,
+    start: "85% 95%",
+    end: "bottom 5%",
+    scrub: 3,
+    markers: true
+  }
+});
+
+gsap.to(sectionSixText, {
+  opacity: 0.9,
+  duration: 2,
+  scrollTrigger: {
+    trigger: sectionSix,
+    start: "25% center",
+    end: "25% 25%",
+    scrub: 3,
+  }
+});
+
+gsap.to(womanLifeFreedom, {
+  opacity: 0.9,
+  scale: 1.2,
+  duration: 2,
+  scrollTrigger: {
+    trigger: sectionSix,
+    start: "35% center",
+    end: "35% 25%",
+    scrub: 3,
+  }
+});

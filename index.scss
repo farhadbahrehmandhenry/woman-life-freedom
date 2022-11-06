@@ -170,7 +170,7 @@ body {
     }
   }
 
-  #section-three, #section-four, #section-five {
+  #section-three, #section-four, #section-five, #section-six {
     opacity: 1;
     color: whitesmoke;
     @include flex;
@@ -218,15 +218,15 @@ body {
       z-index: 0;
     }
 
-    #part-one, #woman, #part-two, #life, #part-three, #freedom {
+    #part-one, #woman, #part-two, #life, #part-three, #freedom, #part-four, #woman-life-freedom {
       opacity: 0;
     }
 
-    #part-one, #part-two, #part-three {
+    #part-one, #part-two, #part-three, #part-four {
       font-size: 1.5rem;
     }
 
-    #woman, #life, #freedom {
+    #woman, #life, #freedom, #woman-life-freedom {
       font-size: 3rem;
       z-index: 1;
     }
@@ -240,6 +240,27 @@ body {
       opacity: 0;
       z-index: 0;
     }
+
+    .impact {
+      width: 4rem;
+      height: 4rem;
+      position: absolute;
+    }
+
+    .story-three-impact1 {
+      top:20%;
+      left: 10%;
+    }
+
+    .story-three-impact2 {
+      top:60%;
+      left: 40%;
+    }
+
+    .story-three-impact3 {
+      bottom: 10%;
+      right: 20%;
+    }
   }
 
   #part-one-texts, #part-two-texts, #part-three-texts {
@@ -248,7 +269,7 @@ body {
     justify-content: space-around;
     align-items: center;
     flex-direction: column;
-    height: 200vh;
+    height: 400vh;
     color: whitesmoke;
     padding-top: 5rem;
     padding-bottom: 5rem;
@@ -341,11 +362,16 @@ body {
     position: relative;
     max-width: 100vw;
 
+
+    span:before {
+      content: "\2260";
+    }
+
     .story-three-cage {
       width: 10rem;
       height: 15rem;
       position: absolute;
-      top: -15%;
+      top: -10%;
       left: 2rem;
       opacity: 0;
       z-index: 0;
@@ -359,23 +385,63 @@ body {
     }
 
     .story-three-bird1 {
-      top: -12%;
+      top: -7%;
       left: 20%;
     }
 
     .story-three-bird2 {
-      top: -14%;
+      top: -9%;
       left: 40%;
     }
 
     .story-three-bird3 {
-      top: -16%;
+      top: -11%;
       left: 60%;
     }
 
     .story-three-bird4 {
-      top: -18%;
+      top: -13%;
       left: 80%;
+    }
+
+    .bullet {
+      height: 2rem;
+      width: 2rem;
+      position: absolute;
+      z-index: 0;
+    }
+
+    .story-three-bullet1 {
+      top: 20%;
+      left: 5rem;
+    }
+
+    .story-three-bullet2 {
+      top: 50%;
+      left: 0;
+    }
+
+    .story-three-bullet3 {
+      top: 75%;
+      left: 0;
+    }
+
+    .story-three-bullet4 {
+      top: 80%;
+      left: 0;
+    }
+
+    .story-three-bullet5 {
+      top: 85%;
+      left: 0;
+    }
+    .story-three-gun {
+      height: 8rem;
+      width: 12rem;
+      position: absolute;
+      left: 0;
+      top: 20%;
+      z-index: 1;
     }
   }
 }

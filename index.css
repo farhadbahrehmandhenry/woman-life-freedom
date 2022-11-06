@@ -228,7 +228,7 @@ body .landing-page #sun {
   opacity: 1;
 }
 
-body #section-three, body #section-four, body #section-five {
+body #section-three, body #section-four, body #section-five, body #section-six {
   opacity: 1;
   color: whitesmoke;
   display: -webkit-box;
@@ -258,7 +258,7 @@ body #section-three, body #section-four, body #section-five {
   position: relative;
 }
 
-body #section-three #blood-1, body #section-three #blood-2, body #section-three #blood-3, body #section-three #blood-4, body #section-four #blood-1, body #section-four #blood-2, body #section-four #blood-3, body #section-four #blood-4, body #section-five #blood-1, body #section-five #blood-2, body #section-five #blood-3, body #section-five #blood-4 {
+body #section-three #blood-1, body #section-three #blood-2, body #section-three #blood-3, body #section-three #blood-4, body #section-four #blood-1, body #section-four #blood-2, body #section-four #blood-3, body #section-four #blood-4, body #section-five #blood-1, body #section-five #blood-2, body #section-five #blood-3, body #section-five #blood-4, body #section-six #blood-1, body #section-six #blood-2, body #section-six #blood-3, body #section-six #blood-4 {
   position: absolute;
   top: 0;
   width: 10rem;
@@ -267,18 +267,18 @@ body #section-three #blood-1, body #section-three #blood-2, body #section-three 
   z-index: 100;
 }
 
-body #section-three #blood-1, body #section-four #blood-1, body #section-five #blood-1 {
+body #section-three #blood-1, body #section-four #blood-1, body #section-five #blood-1, body #section-six #blood-1 {
   left: 2rem;
   border-bottom-left-radius: 3rem;
 }
 
-body #section-three #blood-2, body #section-four #blood-2, body #section-five #blood-2 {
+body #section-three #blood-2, body #section-four #blood-2, body #section-five #blood-2, body #section-six #blood-2 {
   left: 11rem;
   border-bottom-left-radius: 2.5rem;
   border-bottom-right-radius: 3rem;
 }
 
-body #section-three #blood-3, body #section-four #blood-3, body #section-five #blood-3 {
+body #section-three #blood-3, body #section-four #blood-3, body #section-five #blood-3, body #section-six #blood-3 {
   left: 6rem;
   width: 1.5rem;
   border-bottom-left-radius: 2.5rem;
@@ -286,7 +286,7 @@ body #section-three #blood-3, body #section-four #blood-3, body #section-five #b
   z-index: 0;
 }
 
-body #section-three #blood-4, body #section-four #blood-4, body #section-five #blood-4 {
+body #section-three #blood-4, body #section-four #blood-4, body #section-five #blood-4, body #section-six #blood-4 {
   left: 14rem;
   width: 1rem;
   border-bottom-left-radius: 2.5rem;
@@ -294,20 +294,20 @@ body #section-three #blood-4, body #section-four #blood-4, body #section-five #b
   z-index: 0;
 }
 
-body #section-three #part-one, body #section-three #woman, body #section-three #part-two, body #section-three #life, body #section-three #part-three, body #section-three #freedom, body #section-four #part-one, body #section-four #woman, body #section-four #part-two, body #section-four #life, body #section-four #part-three, body #section-four #freedom, body #section-five #part-one, body #section-five #woman, body #section-five #part-two, body #section-five #life, body #section-five #part-three, body #section-five #freedom {
+body #section-three #part-one, body #section-three #woman, body #section-three #part-two, body #section-three #life, body #section-three #part-three, body #section-three #freedom, body #section-three #part-four, body #section-three #woman-life-freedom, body #section-four #part-one, body #section-four #woman, body #section-four #part-two, body #section-four #life, body #section-four #part-three, body #section-four #freedom, body #section-four #part-four, body #section-four #woman-life-freedom, body #section-five #part-one, body #section-five #woman, body #section-five #part-two, body #section-five #life, body #section-five #part-three, body #section-five #freedom, body #section-five #part-four, body #section-five #woman-life-freedom, body #section-six #part-one, body #section-six #woman, body #section-six #part-two, body #section-six #life, body #section-six #part-three, body #section-six #freedom, body #section-six #part-four, body #section-six #woman-life-freedom {
   opacity: 0;
 }
 
-body #section-three #part-one, body #section-three #part-two, body #section-three #part-three, body #section-four #part-one, body #section-four #part-two, body #section-four #part-three, body #section-five #part-one, body #section-five #part-two, body #section-five #part-three {
+body #section-three #part-one, body #section-three #part-two, body #section-three #part-three, body #section-three #part-four, body #section-four #part-one, body #section-four #part-two, body #section-four #part-three, body #section-four #part-four, body #section-five #part-one, body #section-five #part-two, body #section-five #part-three, body #section-five #part-four, body #section-six #part-one, body #section-six #part-two, body #section-six #part-three, body #section-six #part-four {
   font-size: 1.5rem;
 }
 
-body #section-three #woman, body #section-three #life, body #section-three #freedom, body #section-four #woman, body #section-four #life, body #section-four #freedom, body #section-five #woman, body #section-five #life, body #section-five #freedom {
+body #section-three #woman, body #section-three #life, body #section-three #freedom, body #section-three #woman-life-freedom, body #section-four #woman, body #section-four #life, body #section-four #freedom, body #section-four #woman-life-freedom, body #section-five #woman, body #section-five #life, body #section-five #freedom, body #section-five #woman-life-freedom, body #section-six #woman, body #section-six #life, body #section-six #freedom, body #section-six #woman-life-freedom {
   font-size: 3rem;
   z-index: 1;
 }
 
-body #section-three .life-image, body #section-four .life-image, body #section-five .life-image {
+body #section-three .life-image, body #section-four .life-image, body #section-five .life-image, body #section-six .life-image {
   position: absolute;
   bottom: 15%;
   left: 5rem;
@@ -315,6 +315,27 @@ body #section-three .life-image, body #section-four .life-image, body #section-f
   height: 10rem;
   opacity: 0;
   z-index: 0;
+}
+
+body #section-three .impact, body #section-four .impact, body #section-five .impact, body #section-six .impact {
+  width: 4rem;
+  height: 4rem;
+  position: absolute;
+}
+
+body #section-three .story-three-impact1, body #section-four .story-three-impact1, body #section-five .story-three-impact1, body #section-six .story-three-impact1 {
+  top: 20%;
+  left: 10%;
+}
+
+body #section-three .story-three-impact2, body #section-four .story-three-impact2, body #section-five .story-three-impact2, body #section-six .story-three-impact2 {
+  top: 60%;
+  left: 40%;
+}
+
+body #section-three .story-three-impact3, body #section-four .story-three-impact3, body #section-five .story-three-impact3, body #section-six .story-three-impact3 {
+  bottom: 10%;
+  right: 20%;
 }
 
 body #part-one-texts, body #part-two-texts, body #part-three-texts {
@@ -331,7 +352,7 @@ body #part-one-texts, body #part-two-texts, body #part-three-texts {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  height: 200vh;
+  height: 400vh;
   color: whitesmoke;
   padding-top: 5rem;
   padding-bottom: 5rem;
@@ -422,11 +443,15 @@ body #part-three-texts {
   max-width: 100vw;
 }
 
+body #part-three-texts span:before {
+  content: "\2260";
+}
+
 body #part-three-texts .story-three-cage {
   width: 10rem;
   height: 15rem;
   position: absolute;
-  top: -15%;
+  top: -10%;
   left: 2rem;
   opacity: 0;
   z-index: 0;
@@ -440,23 +465,64 @@ body #part-three-texts .bird {
 }
 
 body #part-three-texts .story-three-bird1 {
-  top: -12%;
+  top: -7%;
   left: 20%;
 }
 
 body #part-three-texts .story-three-bird2 {
-  top: -14%;
+  top: -9%;
   left: 40%;
 }
 
 body #part-three-texts .story-three-bird3 {
-  top: -16%;
+  top: -11%;
   left: 60%;
 }
 
 body #part-three-texts .story-three-bird4 {
-  top: -18%;
+  top: -13%;
   left: 80%;
+}
+
+body #part-three-texts .bullet {
+  height: 2rem;
+  width: 2rem;
+  position: absolute;
+  z-index: 0;
+}
+
+body #part-three-texts .story-three-bullet1 {
+  top: 20%;
+  left: 5rem;
+}
+
+body #part-three-texts .story-three-bullet2 {
+  top: 50%;
+  left: 0;
+}
+
+body #part-three-texts .story-three-bullet3 {
+  top: 75%;
+  left: 0;
+}
+
+body #part-three-texts .story-three-bullet4 {
+  top: 80%;
+  left: 0;
+}
+
+body #part-three-texts .story-three-bullet5 {
+  top: 85%;
+  left: 0;
+}
+
+body #part-three-texts .story-three-gun {
+  height: 8rem;
+  width: 12rem;
+  position: absolute;
+  left: 0;
+  top: 20%;
+  z-index: 1;
 }
 
 @-webkit-keyframes flow {
