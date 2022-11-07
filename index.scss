@@ -105,17 +105,18 @@ body {
     background-color: #CC1100;
     z-index: 1;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
     flex-direction: column;
     position: relative;
     padding-right: 1rem;
     padding-left: 1rem;
+    height: 200vh;
 
     .text {
       opacity: 0;
       font-size: 1.5rem;
-      position: absolute;
+      // position: absolute;
     }
   }
 
@@ -149,24 +150,68 @@ body {
     }
   }
 
-  .landing-page {
-    @include flex;
+  #cloudy-sky-2 {
+    background-color: #333636;
+    height: 200vh;
     position: relative;
-    height: 100vh;
+    overflow-x: hidden;
+
+    .cloud4, .cloud5, .cloud6 {
+      position: absolute;
+      opacity: 1;
+    }
+
+    .cloud4 {
+      width: 80vw;
+      height: 40vh;
+      left: 3rem;
+      top: 15%;
+    }
+
+    .cloud5 {
+      width: 60vw;
+      height: 50vh;
+      top: 17%;
+      left: 2rem;
+    }
+
+    .cloud6 {
+      width: 80vw;
+      height: 60vh;
+      right: 3rem;
+      top: 20%;
+      z-index: 100;
+    }
 
     #sun {
-      position: fixed;
-      top: 15%;
-      left: 65%;
-      height: 200px;
-      width: 200px;
+      position: absolute;
+      top: 25%;
+      left: 50%;
+      height: 3rem;
+      width: 3rem;
       box-shadow: 20px 20px 1000px 100px rgb(248, 248, 245);
       border-radius: 50%;
       border: none;
       outline: none;
       background: radial-gradient(closest-side, #e7eb09, #fafaf9);
-      z-index: 0;
+      z-index: 20;
       opacity: 1;
+    }
+
+    #end {
+      position: absolute;
+      opacity: 0;
+      bottom: 25%;
+      z-index: 100;
+    }
+  }
+
+  #after-sun {
+    background-color: #87ceeb;
+    z-index: 10;
+
+    #end {
+      opacity: 0;
     }
   }
 
@@ -231,6 +276,14 @@ body {
       z-index: 1;
     }
 
+    #part-four {
+      font-size: 1rem;
+    }
+
+    #woman-life-freedom {
+      font-size: 1.5rem;
+    }
+
     .life-image {
       position: absolute;
       bottom: 15%;
@@ -245,10 +298,11 @@ body {
       width: 4rem;
       height: 4rem;
       position: absolute;
+      z-index: 1;
     }
 
     .story-three-impact1 {
-      top:20%;
+      top: 20%;
       left: 10%;
     }
 
@@ -261,9 +315,38 @@ body {
       bottom: 10%;
       right: 20%;
     }
+
+    #impact-blood-1, #impact-blood-2, #impact-blood-3 {
+      position: absolute;
+      width: 1rem;
+      height: 0;
+      background-color: #9E0103;
+      z-index: 0;
+    }
+
+    #impact-blood-1 {
+      top: calc(20% + 2rem);
+      left: calc(10% + 1.5rem);
+      border-bottom-left-radius: 2.5rem;
+      border-bottom-right-radius: 3rem;
+    }
+
+    #impact-blood-2 {
+      top: calc(60% + 2rem);
+      left: calc(40% + 1.5rem);
+      border-bottom-left-radius: 2.5rem;
+      border-bottom-right-radius: 3rem;
+    }
+
+    #impact-blood-3 {
+      bottom: calc(10% - 1rem);
+      right: calc(20% + 1.5rem);
+      border-bottom-left-radius: 2.5rem;
+      border-bottom-right-radius: 3rem;
+    }
   }
 
-  #part-one-texts, #part-two-texts, #part-three-texts {
+  #part-one-texts, #part-two-texts, #part-three-texts, #part-four-texts {
     z-index: 1;
     display: flex;
     justify-content: space-around;
@@ -277,6 +360,7 @@ body {
     position: relative;
     padding-right: 1rem;
     padding-left: 1rem;
+    overflow-x: hidden;
     
     .text {
       opacity: 0;
@@ -342,6 +426,26 @@ body {
       top: 70%;
     }
 
+    .story-two-saten1 {
+      top: 20%;
+      left: 50%;
+    }
+
+    .story-two-saten3 {
+      top: 40%;
+      left: 30%;
+    }
+
+    .story-two-saten4 {
+      top: 55%;
+      left: 80%;
+    }
+
+    .story-two-saten5 {
+      top: 70%;
+      right: 30%;
+    }
+
     .story-two-saten7 {
       top: 70%;
       opacity: 0;
@@ -353,8 +457,34 @@ body {
 
   }
 
+  #part-four-texts { 
+    height: 200vh;
+  }
+
   #section-five {
     background-color: #CC1100;
+  }
+
+  #last {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 3rem;
+    background-color: #87ceeb;
+
+    p {
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+      z-index: 200;
+      text-align: center;
+
+      #linkedin {
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
   }
 
   #part-three-texts {

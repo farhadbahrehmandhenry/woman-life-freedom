@@ -144,8 +144,9 @@ body #flood {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -156,12 +157,12 @@ body #flood {
   position: relative;
   padding-right: 1rem;
   padding-left: 1rem;
+  height: 200vh;
 }
 
 body #flood .text {
   opacity: 0;
   font-size: 1.5rem;
-  position: absolute;
 }
 
 body #cloudy-sky {
@@ -194,38 +195,70 @@ body #cloudy-sky .cloud3 {
   z-index: 100;
 }
 
-body .landing-page {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+body #cloudy-sky-2 {
+  background-color: #333636;
+  height: 200vh;
   position: relative;
-  height: 100vh;
+  overflow-x: hidden;
 }
 
-body .landing-page #sun {
-  position: fixed;
+body #cloudy-sky-2 .cloud4, body #cloudy-sky-2 .cloud5, body #cloudy-sky-2 .cloud6 {
+  position: absolute;
+  opacity: 1;
+}
+
+body #cloudy-sky-2 .cloud4 {
+  width: 80vw;
+  height: 40vh;
+  left: 3rem;
   top: 15%;
-  left: 65%;
-  height: 200px;
-  width: 200px;
+}
+
+body #cloudy-sky-2 .cloud5 {
+  width: 60vw;
+  height: 50vh;
+  top: 17%;
+  left: 2rem;
+}
+
+body #cloudy-sky-2 .cloud6 {
+  width: 80vw;
+  height: 60vh;
+  right: 3rem;
+  top: 20%;
+  z-index: 100;
+}
+
+body #cloudy-sky-2 #sun {
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  height: 3rem;
+  width: 3rem;
   -webkit-box-shadow: 20px 20px 1000px 100px #f8f8f5;
           box-shadow: 20px 20px 1000px 100px #f8f8f5;
   border-radius: 50%;
   border: none;
   outline: none;
   background: radial-gradient(closest-side, #e7eb09, #fafaf9);
-  z-index: 0;
+  z-index: 20;
   opacity: 1;
+}
+
+body #cloudy-sky-2 #end {
+  position: absolute;
+  opacity: 0;
+  bottom: 25%;
+  z-index: 100;
+}
+
+body #after-sun {
+  background-color: #87ceeb;
+  z-index: 10;
+}
+
+body #after-sun #end {
+  opacity: 0;
 }
 
 body #section-three, body #section-four, body #section-five, body #section-six {
@@ -307,6 +340,14 @@ body #section-three #woman, body #section-three #life, body #section-three #free
   z-index: 1;
 }
 
+body #section-three #part-four, body #section-four #part-four, body #section-five #part-four, body #section-six #part-four {
+  font-size: 1rem;
+}
+
+body #section-three #woman-life-freedom, body #section-four #woman-life-freedom, body #section-five #woman-life-freedom, body #section-six #woman-life-freedom {
+  font-size: 1.5rem;
+}
+
 body #section-three .life-image, body #section-four .life-image, body #section-five .life-image, body #section-six .life-image {
   position: absolute;
   bottom: 15%;
@@ -321,6 +362,7 @@ body #section-three .impact, body #section-four .impact, body #section-five .imp
   width: 4rem;
   height: 4rem;
   position: absolute;
+  z-index: 1;
 }
 
 body #section-three .story-three-impact1, body #section-four .story-three-impact1, body #section-five .story-three-impact1, body #section-six .story-three-impact1 {
@@ -338,7 +380,36 @@ body #section-three .story-three-impact3, body #section-four .story-three-impact
   right: 20%;
 }
 
-body #part-one-texts, body #part-two-texts, body #part-three-texts {
+body #section-three #impact-blood-1, body #section-three #impact-blood-2, body #section-three #impact-blood-3, body #section-four #impact-blood-1, body #section-four #impact-blood-2, body #section-four #impact-blood-3, body #section-five #impact-blood-1, body #section-five #impact-blood-2, body #section-five #impact-blood-3, body #section-six #impact-blood-1, body #section-six #impact-blood-2, body #section-six #impact-blood-3 {
+  position: absolute;
+  width: 1rem;
+  height: 0;
+  background-color: #9E0103;
+  z-index: 0;
+}
+
+body #section-three #impact-blood-1, body #section-four #impact-blood-1, body #section-five #impact-blood-1, body #section-six #impact-blood-1 {
+  top: calc(20% + 2rem);
+  left: calc(10% + 1.5rem);
+  border-bottom-left-radius: 2.5rem;
+  border-bottom-right-radius: 3rem;
+}
+
+body #section-three #impact-blood-2, body #section-four #impact-blood-2, body #section-five #impact-blood-2, body #section-six #impact-blood-2 {
+  top: calc(60% + 2rem);
+  left: calc(40% + 1.5rem);
+  border-bottom-left-radius: 2.5rem;
+  border-bottom-right-radius: 3rem;
+}
+
+body #section-three #impact-blood-3, body #section-four #impact-blood-3, body #section-five #impact-blood-3, body #section-six #impact-blood-3 {
+  bottom: calc(10% - 1rem);
+  right: calc(20% + 1.5rem);
+  border-bottom-left-radius: 2.5rem;
+  border-bottom-right-radius: 3rem;
+}
+
+body #part-one-texts, body #part-two-texts, body #part-three-texts, body #part-four-texts {
   z-index: 1;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -360,9 +431,10 @@ body #part-one-texts, body #part-two-texts, body #part-three-texts {
   position: relative;
   padding-right: 1rem;
   padding-left: 1rem;
+  overflow-x: hidden;
 }
 
-body #part-one-texts .text, body #part-two-texts .text, body #part-three-texts .text {
+body #part-one-texts .text, body #part-two-texts .text, body #part-three-texts .text, body #part-four-texts .text {
   opacity: 0;
   font-size: 1rem;
   text-align: center;
@@ -374,7 +446,7 @@ body #part-one-texts .text, body #part-two-texts .text, body #part-three-texts .
           transform: translate(-50%, -50%);
 }
 
-body #part-one-texts #story-one-blood1, body #part-one-texts #story-one-blood2, body #part-two-texts #story-one-blood1, body #part-two-texts #story-one-blood2, body #part-three-texts #story-one-blood1, body #part-three-texts #story-one-blood2 {
+body #part-one-texts #story-one-blood1, body #part-one-texts #story-one-blood2, body #part-two-texts #story-one-blood1, body #part-two-texts #story-one-blood2, body #part-three-texts #story-one-blood1, body #part-three-texts #story-one-blood2, body #part-four-texts #story-one-blood1, body #part-four-texts #story-one-blood2 {
   width: 50vw;
   height: 50vh;
   position: absolute;
@@ -383,16 +455,16 @@ body #part-one-texts #story-one-blood1, body #part-one-texts #story-one-blood2, 
   bottom: 10%;
 }
 
-body #part-one-texts #story-one-blood1, body #part-two-texts #story-one-blood1, body #part-three-texts #story-one-blood1 {
+body #part-one-texts #story-one-blood1, body #part-two-texts #story-one-blood1, body #part-three-texts #story-one-blood1, body #part-four-texts #story-one-blood1 {
   right: 1rem;
 }
 
-body #part-one-texts #story-one-blood2, body #part-two-texts #story-one-blood2, body #part-three-texts #story-one-blood2 {
+body #part-one-texts #story-one-blood2, body #part-two-texts #story-one-blood2, body #part-three-texts #story-one-blood2, body #part-four-texts #story-one-blood2 {
   opacity: 0;
   left: 1rem;
 }
 
-body #part-one-texts .doll, body #part-two-texts .doll, body #part-three-texts .doll {
+body #part-one-texts .doll, body #part-two-texts .doll, body #part-three-texts .doll, body #part-four-texts .doll {
   position: absolute;
   width: 30vh;
   height: 30vh;
@@ -400,19 +472,19 @@ body #part-one-texts .doll, body #part-two-texts .doll, body #part-three-texts .
   opacity: 0;
 }
 
-body #part-one-texts .story-two-doll1, body #part-two-texts .story-two-doll1, body #part-three-texts .story-two-doll1 {
+body #part-one-texts .story-two-doll1, body #part-two-texts .story-two-doll1, body #part-three-texts .story-two-doll1, body #part-four-texts .story-two-doll1 {
   top: 10%;
 }
 
-body #part-one-texts .story-two-doll2, body #part-two-texts .story-two-doll2, body #part-three-texts .story-two-doll2 {
+body #part-one-texts .story-two-doll2, body #part-two-texts .story-two-doll2, body #part-three-texts .story-two-doll2, body #part-four-texts .story-two-doll2 {
   top: 40%;
 }
 
-body #part-one-texts .story-two-doll3, body #part-two-texts .story-two-doll3, body #part-three-texts .story-two-doll3 {
+body #part-one-texts .story-two-doll3, body #part-two-texts .story-two-doll3, body #part-three-texts .story-two-doll3, body #part-four-texts .story-two-doll3 {
   top: 70%;
 }
 
-body #part-one-texts .saten, body #part-two-texts .saten, body #part-three-texts .saten {
+body #part-one-texts .saten, body #part-two-texts .saten, body #part-three-texts .saten, body #part-four-texts .saten {
   width: 10vh;
   height: 20vh;
   opacity: 0.7;
@@ -421,11 +493,31 @@ body #part-one-texts .saten, body #part-two-texts .saten, body #part-three-texts
   z-index: 0;
 }
 
-body #part-one-texts .story-two-saten2, body #part-two-texts .story-two-saten2, body #part-three-texts .story-two-saten2 {
+body #part-one-texts .story-two-saten2, body #part-two-texts .story-two-saten2, body #part-three-texts .story-two-saten2, body #part-four-texts .story-two-saten2 {
   top: 70%;
 }
 
-body #part-one-texts .story-two-saten7, body #part-two-texts .story-two-saten7, body #part-three-texts .story-two-saten7 {
+body #part-one-texts .story-two-saten1, body #part-two-texts .story-two-saten1, body #part-three-texts .story-two-saten1, body #part-four-texts .story-two-saten1 {
+  top: 20%;
+  left: 50%;
+}
+
+body #part-one-texts .story-two-saten3, body #part-two-texts .story-two-saten3, body #part-three-texts .story-two-saten3, body #part-four-texts .story-two-saten3 {
+  top: 40%;
+  left: 30%;
+}
+
+body #part-one-texts .story-two-saten4, body #part-two-texts .story-two-saten4, body #part-three-texts .story-two-saten4, body #part-four-texts .story-two-saten4 {
+  top: 55%;
+  left: 80%;
+}
+
+body #part-one-texts .story-two-saten5, body #part-two-texts .story-two-saten5, body #part-three-texts .story-two-saten5, body #part-four-texts .story-two-saten5 {
+  top: 70%;
+  right: 30%;
+}
+
+body #part-one-texts .story-two-saten7, body #part-two-texts .story-two-saten7, body #part-three-texts .story-two-saten7, body #part-four-texts .story-two-saten7 {
   top: 70%;
   opacity: 0;
   width: 17vh;
@@ -433,8 +525,41 @@ body #part-one-texts .story-two-saten7, body #part-two-texts .story-two-saten7, 
   right: calc(10% - 3vh);
 }
 
+body #part-four-texts {
+  height: 200vh;
+}
+
 body #section-five {
   background-color: #CC1100;
+}
+
+body #last {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 3rem;
+  background-color: #87ceeb;
+}
+
+body #last p {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  z-index: 200;
+  text-align: center;
+}
+
+body #last p #linkedin:hover {
+  cursor: pointer;
 }
 
 body #part-three-texts {

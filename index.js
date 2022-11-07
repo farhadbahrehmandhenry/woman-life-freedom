@@ -10,7 +10,6 @@ var firstSec = document.getElementById('section-one');
 var cloud1 = document.querySelector('.cloud-one');
 var cloud2 = document.querySelector('.cloud-two');
 var cloud3 = document.querySelector('.cloud-three');
-var sun = document.getElementById('sun');
 var bloodDrop = document.getElementById('blood-drop');
 var flood = document.getElementById('flood');
 var winter1 = document.querySelector('.winter1');
@@ -26,6 +25,15 @@ var cloudySky = document.getElementById('cloudy-sky');
 var cloud1 = document.querySelector('.cloud1');
 var cloud2 = document.querySelector('.cloud2');
 var cloud3 = document.querySelector('.cloud3');
+
+// sky2
+var cloudySky2 = document.getElementById('cloudy-sky-2');
+var cloud4 = document.querySelector('.cloud4');
+var cloud5 = document.querySelector('.cloud5');
+var cloud6 = document.querySelector('.cloud6');
+var sun = document.getElementById('sun');
+var afterSun = document.getElementById('after-sun');
+var end = document.getElementById('end');
 
 // section three
 var sectionThree = document.getElementById('section-three');
@@ -103,7 +111,15 @@ var womanLifeFreedom = document.getElementById('woman-life-freedom');
 var impact1 = document.querySelector('.story-three-impact1');
 var impact2 = document.querySelector('.story-three-impact2');
 var impact3 = document.querySelector('.story-three-impact3');
+var bloodImpact1 = document.getElementById('impact-blood-1');
+var bloodImpact2 = document.getElementById('impact-blood-2');
+var bloodImpact3 = document.getElementById('impact-blood-3');
 
+var partFourTexts = document.getElementById('part-four-texts');
+var womanLifeFreedom1 = document.querySelector('.woman-life-freedom1');
+var womanLifeFreedom2 = document.querySelector('.woman-life-freedom2');
+var womanLifeFreedom3 = document.querySelector('.woman-life-freedom3');
+var womanLifeFreedom4 = document.querySelector('.woman-life-freedom4');
 
 // animations
 var cloud1Move = gsap.to(cloud1, { scale: 1.1, duration: 9, delay: 2 });
@@ -128,25 +144,32 @@ const winterTl = gsap.timeline({
   scrollTrigger: {
     trigger: flood,
     start: "top 50%",
-    end: "bottom 80%",
+    end: "bottom 40%",
     scrub: 1,
   }
 });
 
 winterTl
   .to(winter1, { opacity: 1, duration: 1 })
+  .to(winter1, { scale: 1.5, duration: 1 })
   .to(winter1, { opacity: 0, duration: 1 })
   .to(winter2, { opacity: 1, duration: 1 })
+  .to(winter2, { scale: 1.5, duration: 1 })
   .to(winter2, { opacity: 0, duration: 1 })
   .to(winter3, { opacity: 1, duration: 1 })
+  .to(winter3, { scale: 1.5, duration: 1 })
   .to(winter3, { opacity: 0, duration: 1 })
   .to(winter4, { opacity: 1, duration: 1 })
+  .to(winter4, { scale: 1.5, duration: 1 })
   .to(winter4, { opacity: 0, duration: 1 })
   .to(winter5, { opacity: 1, duration: 1 })
+  .to(winter5, { scale: 1.5, duration: 1 })
   .to(winter5, { opacity: 0, duration: 1 })
   .to(winter6, { opacity: 1, duration: 1 })
+  .to(winter6, { scale: 1.5, duration: 1 })
   .to(winter6, { opacity: 0, duration: 1 })
   .to(winter7, { opacity: 1, duration: 1 })
+  .to(winter7, { scale: 1.5, duration: 1 })
   .to(winter7, { opacity: 0, duration: 1 })
 
 const skyTl = gsap.timeline({
@@ -164,28 +187,6 @@ skyTl
   .to(cloud2, { opacity: 0.8, duration: 1 })
   .to(cloud3, { opacity: 0.8, duration: 1 })
   .to(cloudySky, { backgroundColor: '#343636', duration: 2 })
-
-// gsap.to(sun, {
-//   scale: 3,
-//   duration: 5,
-//   scrollTrigger: {
-//     trigger: sectionThree,
-//     start: "top 80%",
-//     end: "top 50%",
-//     scrub: 3,
-//   }
-// });
-
-// gsap.to([sun, cloud1, cloud2, cloud3], {
-//   opacity: 0,
-//   duration: 3,
-//   scrollTrigger: {
-//     trigger: sectionThree,
-//     start: "top center",
-//     end: "top 25%",
-//     scrub: 3,
-//   }
-// });
 
 gsap.to(sectionThreeText, {
   opacity: 0.9,
@@ -282,8 +283,8 @@ womanTl
   .to(woman3, { opacity: 0, duration: 2 })
   .to(woman4, { opacity: 1, duration: 2 })
   .to(woman4, { opacity: 0, duration: 2 })
-  .to(woman5, { opacity: 1, duration: 2 })
   .to(storyOneBlood2, { opacity: 1, duration: 2 })
+  .to(woman5, { opacity: 1, duration: 2 })
   .to(woman5, { opacity: 0, duration: 2 })
   .to(woman6, { opacity: 1, duration: 2 })
   .to(woman6, { opacity: 0, duration: 2 })
@@ -360,8 +361,8 @@ lifeTl
   .to(life5, { opacity: 0, duration: 2 })
   .to(storyTwoDoll2, { opacity: 0, duration: 2 })
   .to(life6, { opacity: 1, duration: 2 })
-  .to(life6, { opacity: 0, duration: 2 })
   .to(storyTwoSaten, { opacity: 1, duration: 1 })
+  .to(life6, { opacity: 0, duration: 2 })
   .to(storyTwoDoll3, { opacity: 0.7, duration: 2 })
   .to(life7, { opacity: 1, duration: 2 })
   .to(life7, { opacity: 0, duration: 2 })
@@ -542,7 +543,6 @@ gsap.to(bullet5, {
     start: "85% 95%",
     end: "bottom 5%",
     scrub: 3,
-    markers: true
   }
 });
 
@@ -559,7 +559,7 @@ gsap.to(sectionSixText, {
 
 gsap.to(womanLifeFreedom, {
   opacity: 0.9,
-  scale: 1.2,
+  scale: 1.1,
   duration: 2,
   scrollTrigger: {
     trigger: sectionSix,
@@ -568,3 +568,107 @@ gsap.to(womanLifeFreedom, {
     scrub: 3,
   }
 });
+
+gsap.to(bloodImpact1, {
+  height: '30rem',
+  duration: 5,
+  scrollTrigger: {
+    trigger: sectionSix,
+    start: "top 80%",
+    scrub: 3,
+  }
+});
+
+// gsap.to(bloodImpact2, {
+//   height: '10rem',
+//   duration: 5,
+//   scrollTrigger: {
+//     trigger: sectionSix,
+//     start: "top 40%",
+//     scrub: 3,
+//   }
+// });
+
+// gsap.to(bloodImpact3, {
+//   height: '3rem',
+//   duration: 5,
+//   scrollTrigger: {
+//     trigger: sectionSix,
+//     start: "top 20%",
+//     scrub: 3,
+//   }
+// });
+
+const womanLifeFreedomTl = gsap.timeline({
+  scrollTrigger: {
+    trigger: partFourTexts,
+    start: "top 40%",
+    end: "bottom 40%",
+    scrub: 1,
+  }
+});
+
+womanLifeFreedomTl
+  .to(womanLifeFreedom1, { opacity: 1, duration: 2 })
+  .to(womanLifeFreedom1, { opacity: 0, duration: 2 })
+  .to(womanLifeFreedom2, { opacity: 1, duration: 2 })
+  .to(womanLifeFreedom2, { opacity: 0, duration: 2 })
+  .to(womanLifeFreedom3, { opacity: 1, duration: 2 })
+  .to(womanLifeFreedom3, { opacity: 0, duration: 2 })
+  .to(womanLifeFreedom4, { opacity: 1, duration: 2 })
+  .to(womanLifeFreedom4, { scale: 2, duration: 3 })
+  .to(womanLifeFreedom4, { opacity: 0, duration: 2 })
+
+const sky2Tl = gsap.timeline({
+  scrollTrigger: {
+    trigger: cloudySky2,
+    start: "top 30%",
+    end: "50% 70%",
+    scrub: 1,
+  }
+});
+
+sky2Tl
+  .to(cloudySky2, { backgroundColor: '#343636', duration: 3 })
+  .to(cloud4, { left: "-50%", duration: 5 })
+  .to(cloud4, { opacity: 0.8, duration: 5 })
+  .to(cloud5, { top: "-30%", duration: 5 })
+  .to(cloud5, { opacity: 0.8, duration: 5 })
+  .to(cloudySky2, { backgroundColor: '#87ceeb', duration: 5 })
+  .to(cloud6, { right: "-50%", duration: 5 })
+  .to(cloud6, { opacity: 0.8, duration: 5 })
+
+gsap.to(sun, {
+  scale: 5,
+  duration: 5,
+  scrollTrigger: {
+    trigger: cloudySky2,
+    start: "50% 80%",
+    end: "60% 80%",
+    scrub: 3,
+    pin: sun,
+  }
+});
+
+gsap.to(end, {
+  opacity: 1,
+  scale: 4,
+  duration: 5,
+  scrollTrigger: {
+    trigger: cloudySky2,
+    start: "70% 80%",
+    scrub: 3,
+  }
+});
+
+// gsap.to(end, {
+//   opacity: 1,
+//   scale: 1.5,
+//   duration: 5,
+//   scrollTrigger: {
+//     trigger: afterSun,
+//     start: "center 70%",
+//     scrub: 3,
+//     // markers: true
+//   }
+// });
