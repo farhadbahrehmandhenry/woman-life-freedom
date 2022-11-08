@@ -10,11 +10,24 @@
   <link href="https://fonts.googleapis.com/css2?family=Mouse+Memoirs&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="index.css">
+  <script src='nprogress.js'></script>
+  <link rel='stylesheet' href='nprogress.css' />
   <title>IRAN</title>
+  <script type="text/javascript">
+    var loadingFlags = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1];
+    function setLoadingFlags(i) {
+      loadingFlags[i] = 0;
+      console.log('loaded')
+    }
+  </script>
+
 </head>
 
 <body>
   <section id="blood-drop">
+    <div class="loader-wrapper">
+      <span class="loader"><span class="loader-inner"></span></span>
+    </div>
     <svg xmlns="http://www.w3.org/2000/svg" version="1.1" style="width: 0;height: 0;">
       <defs>
         <filter id="goo">
@@ -24,7 +37,6 @@
         </filter>
       </defs>
     </svg>
-
     <h1 class="title">
       IRAN
       <span class="drop"></span>
@@ -45,9 +57,9 @@
     <h3 class="winter8 text">It was still winter...</h3>
   </section>
   <section id="cloudy-sky">
-    <img class="cloud1" src="./images/cloud2.png" alt="cloud1">
-    <img class="cloud2" src="./images/cloud2.png" alt="cloud3">
-    <img class="cloud3" src="./images/cloud2.png" alt="cloud4">
+    <img class="cloud1" src="./images/cloud2.png" alt="cloud1" onload="setLoadingFlags(0)">
+    <img class="cloud2" src="./images/cloud2.png" alt="cloud3" onload="setLoadingFlags(1)">
+    <img class="cloud3" src="./images/cloud2.png" alt="cloud4" onload="setLoadingFlags(2)">
   </section>
   <section id="section-three">
     <div id="blood-1"></div>
@@ -81,16 +93,17 @@
       rape her...</p>
     <p class="woman7 text">The man died and she was convicted of premeditated murder. She was hanged when she was 26...</p>
     <!-- <img id="story-one-blood1" class="parallax-blood" data-speed="0.2" src="./images/blood-drip1.png" alt="blood-drip1"> -->
-    <img id="story-one-blood4" src="./images/desperate.png" alt="desperate">
-    <img id="story-one-blood2" src="./images/blood-drip2.png" class="parallax-blood" data-speed="0.1" alt="blood-drip2">
-    <img id="story-one-blood3" src="./images/reyhaneh.png" alt="blood-drip2">
-    <img id="story-one-blood5" src="./images/execution.png" alt="execution">
+    <img id="story-one-blood4" src="./images/desperate.png" alt="desperate" onload="setLoadingFlags(3)">
+    <img id="story-one-blood2" src="./images/blood-drip2.png" class="parallax-blood" data-speed="0.1" alt="blood-drip2"
+      onload="setLoadingFlags(4)">
+    <img id="story-one-blood3" src="./images/reyhaneh.png" alt="blood-drip2" onload="setLoadingFlags(5)">
+    <img id="story-one-blood5" src="./images/execution.png" alt="execution" onload="setLoadingFlags(6)">
 
   </section>
   <section id="section-four">
     <h3 id="part-two">PART 2</h3>
     <h4 id="life">LIFE</h4>
-    <img class="life-image" src="./images/life.png" alt="life">
+    <img class="life-image" src="./images/life.png" alt="life" onload="setLoadingFlags(7)">
   </section>
   <section id="part-two-texts">
     <p class="life1 text">Saeeda: <i>"I don't wanna get married, I'm only 10...."</i></p>
@@ -114,10 +127,10 @@
         to do some chores..."</i>
     </p>
     <p class="life9 text">How soon they get old...</p>
-    <img class="story-two-doll1 doll" src="./images/doll1.png" alt="doll1">
-    <img class="story-two-doll2 doll" src="./images/doll2.png" alt="doll2" data-speed="0.25">
-    <img class="story-two-doll3 doll" src="./images/doll3.png" alt="doll3" data-speed="0.25">
-    <img class="story-two-life" src="./images/life10.png" alt="life">
+    <img class="story-two-doll1 doll" src="./images/doll1.png" alt="doll1" onload="setLoadingFlags(8)">
+    <img class="story-two-doll2 doll" src="./images/doll2.png" alt="doll2" data-speed="0.25" onload="setLoadingFlags(9)">
+    <img class="story-two-doll3 doll" src="./images/doll3.png" alt="doll3" data-speed="0.25" onload="setLoadingFlags(10)">
+    <img class="story-two-life" src="./images/life10.png" alt="life" onload="setLoadingFlags(11)">
 
     <!-- <img class="story-two-saten1 saten parallax-bg" src="./images/saten1.png" alt="saten1" data-speed="0.1"> -->
     <!-- <img class="story-two-saten2 saten parallax-bg" src="./images/saten2.png" alt="saten2" data-speed="0.3"> -->
@@ -129,11 +142,11 @@
   <section id="section-five">
     <h3 id="part-three">PART 3</h3>
     <h4 id="freedom">FREEDOM</h4>
-    <img class="story-three-cage" src="./images/cage.png" alt="cage">
-    <img class="story-three-bird1 bird" src="./images/bird1.png" alt="bird1">
-    <img class="story-three-bird2 bird" src="./images/bird2.png" alt="bird2">
-    <img class="story-three-bird3 bird" src="./images/bird3.png" alt="bird3">
-    <img class="story-three-bird4 bird" src="./images/bird4.png" alt="bird4">
+    <img class="story-three-cage" src="./images/cage.png" alt="cage" onload="setLoadingFlags(12)">
+    <img class="story-three-bird1 bird" src="./images/bird1.png" alt="bird1" onload="setLoadingFlags(13)">
+    <img class="story-three-bird2 bird" src="./images/bird2.png" alt="bird2" onload="setLoadingFlags(14)">
+    <img class="story-three-bird3 bird" src="./images/bird3.png" alt="bird3" onload="setLoadingFlags(15)">
+    <img class="story-three-bird4 bird" src="./images/bird4.png" alt="bird4" onload="setLoadingFlags(16)">
   </section>
   <section id="part-three-texts">
     <p class="freedom1 text">Mahsa (before she got bitten by Islamic Regime officials): <i>"For the sake of god, let me go. I am not from
@@ -150,19 +163,19 @@
       past 43 years...</p>
     <p class="freedom7 text">Thousands of people have been imprisoned just to be brave enough to seek their basic rights...</p>
     <p class="freedom8 text">Islamic Regime <span id="not-equal"></span> Freedom</p>
-    <img class="story-three-gun parallax-gun" src="./images/gun.webp" alt="gun" data-speed="-0.2">
-    <img class="story-three-bullet1 bullet" src="./images/bullet.webp" alt="bullet">
-    <img class="story-three-bullet2 bullet" src="./images/bullet.webp" alt="bullet">
-    <img class="story-three-bullet3 bullet" src="./images/bullet.webp" alt="bullet">
-    <img class="story-three-bullet4 bullet" src="./images/bullet.webp" alt="bullet">
-    <img class="story-three-bullet5 bullet" src="./images/bullet.webp" alt="bullet">
+    <img class="story-three-gun parallax-gun" src="./images/gun.webp" alt="gun" data-speed="-0.2" onload="setLoadingFlags(17)">
+    <img class="story-three-bullet1 bullet" src="./images/bullet.webp" alt="bullet" onload="setLoadingFlags(18)">
+    <img class="story-three-bullet2 bullet" src="./images/bullet.webp" alt="bullet" onload="setLoadingFlags(19)">
+    <img class="story-three-bullet3 bullet" src="./images/bullet.webp" alt="bullet" onload="setLoadingFlags(20)">
+    <img class="story-three-bullet4 bullet" src="./images/bullet.webp" alt="bullet" onload="setLoadingFlags(21)">
+    <img class="story-three-bullet5 bullet" src="./images/bullet.webp" alt="bullet" onload="setLoadingFlags(22)">
   </section>
   <section id="section-six">
     <h3 id="part-four">PART 4</h3>
     <h4 id="woman-life-freedom">WOMAN, LIFE, FREEDOM</h4>
-    <img class="story-three-impact1 impact" src="./images/impact.png" alt="impact">
-    <img class="story-three-impact2 impact" src="./images/impact.png" alt="impact">
-    <img class="story-three-impact3 impact" src="./images/impact.png" alt="impact">
+    <img class="story-three-impact1 impact" src="./images/impact.png" alt="impact" onload="setLoadingFlags(23)">
+    <img class="story-three-impact2 impact" src="./images/impact.png" alt="impact" onload="setLoadingFlags(24)">
+    <img class="story-three-impact3 impact" src="./images/impact.png" alt="impact" onload="setLoadingFlags(25)">
     <div id="impact-blood-1"></div>
     <div id="impact-blood-2"></div>
     <div id="impact-blood-3"></div>
@@ -174,9 +187,9 @@
     <p class="woman-life-freedom4 text">And sun will shine again...</p>
   </section>
   <section id="cloudy-sky-2">
-    <img class="cloud4" src="./images/cloud2.png" alt="cloud4">
-    <img class="cloud5" src="./images/cloud2.png" alt="cloud5">
-    <img class="cloud6" src="./images/cloud2.png" alt="cloud6">
+    <img class="cloud4" src="./images/cloud2.png" alt="cloud4" onload="setLoadingFlags(26)">
+    <img class="cloud5" src="./images/cloud2.png" alt="cloud5" onload="setLoadingFlags(27)">
+    <img class="cloud6" src="./images/cloud2.png" alt="cloud6" onload="setLoadingFlags(28)">
     <div id="sun"></div>
     <h3 id="end">The End</h3>
   </section>
@@ -193,6 +206,21 @@
     <p id="linkedin"><a href="https://www.linkedin.com/in/farhad-bahrehmand/" target="_blank">Farhad Bahrehmand</a></p>
   </section>
   <!-- scripts -->
+  <script>
+    function processImages() {
+      if (loadingFlags.some(flag => flag === 1)) {
+        // check often until loaded
+        window.setTimeout(processImages, 50);
+        return;
+      }
+
+      console.log('hiiiii')
+    }
+
+    NProgress.start();
+    processImages();
+  </script>
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
   <script src="index.js"></script>
