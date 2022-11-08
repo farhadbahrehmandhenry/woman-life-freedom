@@ -19,6 +19,7 @@ var winter4 = document.querySelector('.winter4');
 var winter5 = document.querySelector('.winter5');
 var winter6 = document.querySelector('.winter6');
 var winter7 = document.querySelector('.winter7');
+var winter8 = document.querySelector('.winter8');
 
 // sky
 var cloudySky = document.getElementById('cloudy-sky');
@@ -54,6 +55,9 @@ var woman6 = document.querySelector('.woman6');
 var woman7 = document.querySelector('.woman7');
 var storyOneBlood1 = document.getElementById('story-one-blood1');
 var storyOneBlood2 = document.getElementById('story-one-blood2');
+var storyOneBlood3 = document.getElementById('story-one-blood3');
+var storyOneBlood4 = document.getElementById('story-one-blood4');
+var storyOneBlood5 = document.getElementById('story-one-blood5');
 
 
 // section four
@@ -76,6 +80,7 @@ var storyTwoDoll1 = document.querySelector('.story-two-doll1');
 var storyTwoDoll2 = document.querySelector('.story-two-doll2');
 var storyTwoDoll3 = document.querySelector('.story-two-doll3');
 var storyTwoSaten = document.querySelector('.story-two-saten7');
+var storyTwoLife = document.querySelector('.story-two-life');
 
 // section five
 var sectionFive = document.getElementById('section-five');
@@ -151,26 +156,21 @@ const winterTl = gsap.timeline({
 
 winterTl
   .to(winter1, { opacity: 1, duration: 1 })
-  .to(winter1, { scale: 1.5, duration: 1 })
   .to(winter1, { opacity: 0, duration: 1 })
   .to(winter2, { opacity: 1, duration: 1 })
-  .to(winter2, { scale: 1.5, duration: 1 })
   .to(winter2, { opacity: 0, duration: 1 })
   .to(winter3, { opacity: 1, duration: 1 })
-  .to(winter3, { scale: 1.5, duration: 1 })
   .to(winter3, { opacity: 0, duration: 1 })
   .to(winter4, { opacity: 1, duration: 1 })
-  .to(winter4, { scale: 1.5, duration: 1 })
   .to(winter4, { opacity: 0, duration: 1 })
   .to(winter5, { opacity: 1, duration: 1 })
-  .to(winter5, { scale: 1.5, duration: 1 })
   .to(winter5, { opacity: 0, duration: 1 })
   .to(winter6, { opacity: 1, duration: 1 })
-  .to(winter6, { scale: 1.5, duration: 1 })
   .to(winter6, { opacity: 0, duration: 1 })
   .to(winter7, { opacity: 1, duration: 1 })
-  .to(winter7, { scale: 1.5, duration: 1 })
   .to(winter7, { opacity: 0, duration: 1 })
+  .to(winter8, { opacity: 1, duration: 1 })
+  .to(winter8, { opacity: 0, duration: 1 })
 
 const skyTl = gsap.timeline({
   scrollTrigger: {
@@ -278,16 +278,23 @@ womanTl
   .to(woman1, { opacity: 1, duration: 2 })
   .to(woman1, { opacity: 0, duration: 2 })
   .to(woman2, { opacity: 1, duration: 2 })
+  .to(storyOneBlood4, { opacity: 0.4, duration: 1 })
+  .to(storyOneBlood4, { scale: 1.5, duration: 2 })
   .to(woman2, { opacity: 0, duration: 2 })
   .to(woman3, { opacity: 1, duration: 2 })
+  .to(storyOneBlood3, { opacity: 0.4, duration: 1 })
   .to(woman3, { opacity: 0, duration: 2 })
+  .to(storyOneBlood3, { scale: 1.5, duration: 2 })
   .to(woman4, { opacity: 1, duration: 2 })
   .to(woman4, { opacity: 0, duration: 2 })
-  .to(storyOneBlood2, { opacity: 1, duration: 2 })
+  // .to(storyOneBlood2, { opacity: 1, duration: 2 })
   .to(woman5, { opacity: 1, duration: 2 })
   .to(woman5, { opacity: 0, duration: 2 })
+  .to(storyOneBlood5, { opacity: 0.4, duration: 1 })
+  .to(storyOneBlood5, { scale: 1.5, duration: 2 })
   .to(woman6, { opacity: 1, duration: 2 })
   .to(woman6, { opacity: 0, duration: 2 })
+
   .to(woman7, { opacity: 1, duration: 2 })
   .to(woman7, { opacity: 0, duration: 2 })
 
@@ -351,24 +358,26 @@ lifeTl
   .to(life2, { opacity: 1, duration: 2 })
   .to(storyTwoDoll1, { opacity: 1, duration: 2 })
   .to(life2, { opacity: 0, duration: 2 })
+  .to(storyTwoDoll1, { scale: 1.5, duration: 2 })
   .to(life3, { opacity: 1, duration: 2 })
   .to(storyTwoDoll1, { opacity: 0, duration: 2 })
   .to(life3, { opacity: 0, duration: 2 })
   .to(life4, { opacity: 1, duration: 2 })
-  .to(storyTwoDoll2, { opacity: 0.7, duration: 2 })
   .to(life4, { opacity: 0, duration: 2 })
+  .to(storyTwoDoll2, { opacity: 0.7, duration: 2 })
+  .to(storyTwoDoll2, { scale: 1.5, duration: 2 })
   .to(life5, { opacity: 1, duration: 2 })
   .to(life5, { opacity: 0, duration: 2 })
   .to(storyTwoDoll2, { opacity: 0, duration: 2 })
   .to(life6, { opacity: 1, duration: 2 })
-  .to(storyTwoSaten, { opacity: 1, duration: 1 })
+  // .to(storyTwoSaten, { opacity: 1, duration: 1 })
   .to(life6, { opacity: 0, duration: 2 })
-  .to(storyTwoDoll3, { opacity: 0.7, duration: 2 })
+  .to(storyTwoLife, { opacity: 0.7, duration: 2 })
   .to(life7, { opacity: 1, duration: 2 })
+  .to(storyTwoLife, { scale: 1.5, duration: 2 })
   .to(life7, { opacity: 0, duration: 2 })
   .to(life8, { opacity: 1, duration: 2 })
   .to(life8, { opacity: 0, duration: 2 })
-  .to(storyTwoDoll3, { opacity: 0, duration: 2 })
   .to(life9, { opacity: 1, duration: 2 })
   .to(life9, { opacity: 0, duration: 2 })
 
@@ -408,8 +417,8 @@ gsap.to(freedom, {
 const cageTl = gsap.timeline({
   scrollTrigger: {
     trigger: sectionFive,
-    start: "bottom bottom",
-    end: "bottom 80%",
+    start: "50% 45%",
+    end: "50% 30%",
     scrub: 1,
   }
 });
@@ -483,7 +492,6 @@ freedomTl
 //     start: "top 30%",
 //     end: "top 20%",
 //     scrub: 4,
-//     markers: true
 //   }
 // });
 
@@ -669,6 +677,5 @@ gsap.to(end, {
 //     trigger: afterSun,
 //     start: "center 70%",
 //     scrub: 3,
-//     // markers: true
 //   }
 // });
