@@ -1,23 +1,52 @@
 var loaderWrapper = document.querySelector('.loader-wrapper');
 var loader = document.querySelector('.loader');
 var body = document.body;
+var bloodDrop = document.getElementById('blood-drop');
+var scroll = document.getElementById('scroll');
+
+userHasScrolled = false;
+waitTreshold = 0;
+
+window.onscroll = function (e) {
+  userHasScrolled = true;
+  scroll.classList.remove('active');
+  clearInterval(userScroll);
+}
+
+var userScroll = setInterval(() => {
+  if (!userHasScrolled) {
+    waitTreshold++
+
+    if (waitTreshold === 3) {
+      scroll.classList.add('active');
+    }
+
+  }
+}, 3000);
 
 window.onbeforeunload = function () {
+  var flood = document.getElementById('flood');
+  flood.style.top = 0;
   loaderWrapper.style.zIndex = 100;
   loader.style.opacity = 1;
   body.style.overflow = 'hidden';
-
+  bloodDrop.style.height = '100vh';
+  bloodDrop.style.opacity = 0;
+  body.style.opacity = 0;
   window.scrollTo(0, 0);
 }
 
 window.addEventListener('load', () => {
-
-
-
-  // loader.style.opacity = 0;
+  var title = document.querySelector('.title');
+  var flood = document.getElementById('flood');
+  var bloodDrop = document.getElementById('blood-drop');
   loaderWrapper.style.zIndex = 0;
   loader.style.opacity = 0;
   body.style.overflow = 'scroll';
+  title.style.opacity = 1;
+  flood.style.zIndex = 1;
+  flood.style.top = '-10%';
+  bloodDrop.style.opacity = 1;
 
   gsap.registerPlugin(ScrollTrigger);
 
@@ -203,11 +232,11 @@ window.addEventListener('load', () => {
   });
 
   skyTl
-    .to(cloudySky, { backgroundColor: '#CC1100', duration: 3 })
+    // .to(cloudySky, { backgroundColor: '#CC1100', duration: 3 })
     .to(cloud1, { opacity: 0.8, duration: 2 })
     .to(cloud2, { opacity: 0.8, duration: 1 })
     .to(cloud3, { opacity: 0.8, duration: 1 })
-    .to(cloudySky, { backgroundColor: '#343636', duration: 2 })
+  // .to(cloudySky, { backgroundColor: '#343636', duration: 2 })
 
   gsap.to(sectionThreeText, {
     opacity: 0.9,
@@ -298,24 +327,24 @@ window.addEventListener('load', () => {
   womanTl
     .to(woman1, { opacity: 1, duration: 2 })
     .to(woman1, { opacity: 0, duration: 2 })
-    .to(woman2, { opacity: 1, duration: 2 })
     .to(storyOneBlood4, { opacity: 0.4, duration: 1 })
     .to(storyOneBlood4, { scale: 1.5, duration: 2 })
+    .to(woman2, { opacity: 1, duration: 2 })
     .to(woman2, { opacity: 0, duration: 2 })
     .to(woman3, { opacity: 1, duration: 2 })
     .to(storyOneBlood3, { opacity: 0.4, duration: 1 })
-    .to(woman3, { opacity: 0, duration: 2 })
     .to(storyOneBlood3, { scale: 1.5, duration: 2 })
+    .to(woman3, { opacity: 0, duration: 2 })
     .to(woman4, { opacity: 1, duration: 2 })
     .to(woman4, { opacity: 0, duration: 2 })
     // .to(storyOneBlood2, { opacity: 1, duration: 2 })
     .to(woman5, { opacity: 1, duration: 2 })
-    .to(woman5, { opacity: 0, duration: 2 })
     .to(storyOneBlood5, { opacity: 0.4, duration: 1 })
     .to(storyOneBlood5, { scale: 1.5, duration: 2 })
+    .to(woman5, { opacity: 0, duration: 2 })
+
     .to(woman6, { opacity: 1, duration: 2 })
     .to(woman6, { opacity: 0, duration: 2 })
-
     .to(woman7, { opacity: 1, duration: 2 })
     .to(woman7, { opacity: 0, duration: 2 })
 
@@ -376,16 +405,16 @@ window.addEventListener('load', () => {
   lifeTl
     .to(life1, { opacity: 1, duration: 2 })
     .to(life1, { opacity: 0, duration: 2 })
-    .to(life2, { opacity: 1, duration: 2 })
     .to(storyTwoDoll1, { opacity: 1, duration: 2 })
-    .to(life2, { opacity: 0, duration: 2 })
+    .to(life2, { opacity: 1, duration: 2 })
     .to(storyTwoDoll1, { scale: 1.5, duration: 2 })
+    .to(life2, { opacity: 0, duration: 2 })
     .to(life3, { opacity: 1, duration: 2 })
     .to(storyTwoDoll1, { opacity: 0, duration: 2 })
     .to(life3, { opacity: 0, duration: 2 })
     .to(life4, { opacity: 1, duration: 2 })
     .to(life4, { opacity: 0, duration: 2 })
-    .to(storyTwoDoll2, { opacity: 0.7, duration: 2 })
+    .to(storyTwoDoll2, { opacity: 0.5, duration: 2 })
     .to(storyTwoDoll2, { scale: 1.5, duration: 2 })
     .to(life5, { opacity: 1, duration: 2 })
     .to(life5, { opacity: 0, duration: 2 })
@@ -402,7 +431,7 @@ window.addEventListener('load', () => {
     .to(life9, { opacity: 1, duration: 2 })
     .to(life9, { opacity: 0, duration: 2 })
 
-  gsap.to(".parallax-bg", {
+  gsap.to(".parallax-soul", {
     scrollTrigger: {
       trigger: partTwoTexts,
       start: "60% center",
@@ -411,6 +440,15 @@ window.addEventListener('load', () => {
     y: (i, target) => -ScrollTrigger.maxScroll(window) * target.dataset.speed,
     ease: "none"
   });
+  // gsap.to(".parallax-bg", {
+  //   scrollTrigger: {
+  //     trigger: partTwoTexts,
+  //     start: "60% center",
+  //     scrub: true,
+  //   },
+  //   y: (i, target) => -ScrollTrigger.maxScroll(window) * target.dataset.speed,
+  //   ease: "none"
+  // });
 
   gsap.to(sectionFiveText, {
     opacity: 0.9,

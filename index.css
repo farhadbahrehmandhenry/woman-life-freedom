@@ -13,6 +13,24 @@ body {
   height: 100vh;
   overflow: hidden;
   overflow-x: hidden;
+  background-color: #333636;
+  position: relative;
+}
+
+body #scroll {
+  position: fixed;
+  bottom: 1rem;
+  left: 50%;
+  width: 2rem;
+  height: 2rem;
+  z-index: 1000;
+  opacity: 0;
+}
+
+body #scroll.active {
+  -webkit-animation: scale 1s ease infinite;
+          animation: scale 1s ease infinite;
+  opacity: 1;
 }
 
 body .dark {
@@ -36,24 +54,8 @@ body section {
           align-items: center;
 }
 
-body #blood-drop {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  height: 100vh;
-  text-align: center;
-  z-index: 0;
-  position: relative;
-}
-
-body #blood-drop .loader-wrapper {
-  background-color: #242f3f;
+body .loader-wrapper {
+  background-color: #333636;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -66,12 +68,14 @@ body #blood-drop .loader-wrapper {
   -webkit-transition: opacity 1s ease-out;
   transition: opacity 1s ease-out;
   position: fixed;
-  height: 100%;
-  width: 100%;
+  height: 100vh;
+  width: 100vw;
   z-index: 100;
+  top: 0;
+  left: 0;
 }
 
-body #blood-drop .loader-wrapper .loader {
+body .loader-wrapper .loader {
   display: inline-block;
   width: 30px;
   height: 30px;
@@ -79,9 +83,12 @@ body #blood-drop .loader-wrapper .loader {
   border: 4px solid #Fff;
   -webkit-animation: loader 2s infinite ease;
           animation: loader 2s infinite ease;
+  position: fixed;
+  top: 50%;
+  left: 50%;
 }
 
-body #blood-drop .loader-wrapper .loader .loader-inner {
+body .loader-wrapper .loader .loader-inner {
   vertical-align: top;
   display: inline-block;
   width: 100%;
@@ -172,6 +179,23 @@ body #blood-drop .loader-wrapper .loader .loader-inner {
   }
 }
 
+body #blood-drop {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100vh;
+  text-align: center;
+  z-index: 0;
+  position: relative;
+  top: 0 !important;
+}
+
 body #blood-drop .title {
   font-weight: bold;
   font-size: 7rem;
@@ -181,6 +205,15 @@ body #blood-drop .title {
   position: relative;
   color: #CC1100;
   text-transform: uppercase;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: 0;
+  opacity: 0;
+  -webkit-transition: opacity 5s ease;
+  transition: opacity 5s ease;
 }
 
 body #blood-drop .drop {
@@ -262,7 +295,7 @@ body #blood-drop .drop:nth-child(5) {
 
 body #flood {
   background-color: #CC1100;
-  z-index: 1;
+  z-index: -1;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -280,6 +313,10 @@ body #flood {
   padding-right: 1rem;
   padding-left: 1rem;
   height: 200vh;
+  top: 0;
+  opacity: 1;
+  -webkit-transition: top 5s ease;
+  transition: top 5s ease;
 }
 
 body #flood .text {
@@ -289,7 +326,7 @@ body #flood .text {
 }
 
 body #cloudy-sky {
-  background-color: #CC1100;
+  background-color: #333636;
   position: relative;
   overflow-x: hidden;
 }
@@ -300,22 +337,23 @@ body #cloudy-sky .cloud1, body #cloudy-sky .cloud2, body #cloudy-sky .cloud3 {
 }
 
 body #cloudy-sky .cloud1 {
-  width: 80vw;
+  width: 50vw;
   height: 40vh;
   left: 5rem;
+  top: 4rem;
 }
 
 body #cloudy-sky .cloud2 {
-  width: 60vw;
+  width: 50vw;
   height: 50vh;
-  top: 2rem;
+  top: 25%;
 }
 
 body #cloudy-sky .cloud3 {
-  width: 80vw;
+  width: 60vw;
   height: 60vh;
   right: 5rem;
-  z-index: 100;
+  top: 3rem;
 }
 
 body #cloudy-sky-2 {
@@ -331,25 +369,29 @@ body #cloudy-sky-2 .cloud4, body #cloudy-sky-2 .cloud5, body #cloudy-sky-2 .clou
 }
 
 body #cloudy-sky-2 .cloud4 {
-  width: 80vw;
+  width: 60vw;
   height: 40vh;
   left: 3rem;
   top: 15%;
+  z-index: 18;
 }
 
 body #cloudy-sky-2 .cloud5 {
-  width: 60vw;
+  width: 50vw;
   height: 50vh;
   top: 17%;
-  left: 2rem;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  z-index: 22;
 }
 
 body #cloudy-sky-2 .cloud6 {
-  width: 80vw;
+  width: 70vw;
   height: 60vh;
   right: 3rem;
-  top: 20%;
-  z-index: 100;
+  top: 10%;
+  z-index: 21;
 }
 
 body #cloudy-sky-2 #sun {
@@ -475,7 +517,7 @@ body #section-three .life-image, body #section-four .life-image, body #section-f
   position: absolute;
   bottom: 15%;
   left: 5rem;
-  width: 5rem;
+  width: 10rem;
   height: 10rem;
   opacity: 0;
   z-index: 0;
@@ -613,12 +655,14 @@ body #part-one-texts #story-one-blood5, body #part-two-texts #story-one-blood5, 
 
 body #part-one-texts .doll, body #part-two-texts .doll, body #part-three-texts .doll, body #part-four-texts .doll {
   position: absolute;
-  width: 30vh;
-  height: 30vh;
   left: 50%;
   opacity: 0;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
+  width: 20rem;
+  height: 20rem;
+  opacity: 0;
+  border-radius: 25px;
 }
 
 body #part-one-texts .story-two-doll1, body #part-two-texts .story-two-doll1, body #part-three-texts .story-two-doll1, body #part-four-texts .story-two-doll1 {
@@ -642,6 +686,25 @@ body #part-one-texts .story-two-life, body #part-two-texts .story-two-life, body
   opacity: 0;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
+}
+
+body #part-one-texts .story-two-soul1, body #part-one-texts .story-two-soul2, body #part-two-texts .story-two-soul1, body #part-two-texts .story-two-soul2, body #part-three-texts .story-two-soul1, body #part-three-texts .story-two-soul2, body #part-four-texts .story-two-soul1, body #part-four-texts .story-two-soul2 {
+  position: absolute;
+  bottom: -5%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 45vw;
+  height: 20vh;
+  opacity: 0.5;
+  z-index: 1;
+}
+
+body #part-one-texts .story-two-soul2, body #part-two-texts .story-two-soul2, body #part-three-texts .story-two-soul2, body #part-four-texts .story-two-soul2 {
+  opacity: 0.2;
+  -webkit-transform: translateX(-47%);
+          transform: translateX(-47%);
+  z-index: 0;
 }
 
 body #part-one-texts .saten, body #part-two-texts .saten, body #part-three-texts .saten, body #part-four-texts .saten {
@@ -835,6 +898,36 @@ body #part-three-texts .story-three-gun {
   50% {
     -webkit-transform: scale(1.02);
             transform: scale(1.02);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@-webkit-keyframes scale {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(1.3);
+            transform: scale(1.3);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes scale {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(1.3);
+            transform: scale(1.3);
   }
   100% {
     -webkit-transform: scale(1);

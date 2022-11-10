@@ -10,20 +10,18 @@
   <link href="https://fonts.googleapis.com/css2?family=Mouse+Memoirs&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="index.css">
-  <script src='nprogress.js'></script>
-  <link rel='stylesheet' href='nprogress.css' />
   <title>IRAN</title>
   <script type="text/javascript">
-    var loadingFlags = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1];
+    var loadingFlags = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1];
     function setLoadingFlags(i) {
       loadingFlags[i] = 0;
-      console.log('loaded')
     }
   </script>
 
 </head>
 
 <body>
+  <img src="./images/scroll.png" alt="scroll" id="scroll">
   <section id="blood-drop">
     <div class="loader-wrapper">
       <span class="loader"><span class="loader-inner"></span></span>
@@ -58,8 +56,8 @@
   </section>
   <section id="cloudy-sky">
     <img class="cloud1" src="./images/cloud2.png" alt="cloud1" onload="setLoadingFlags(0)">
-    <img class="cloud2" src="./images/cloud2.png" alt="cloud3" onload="setLoadingFlags(1)">
     <img class="cloud3" src="./images/cloud2.png" alt="cloud4" onload="setLoadingFlags(2)">
+    <img class="cloud2" src="./images/cloud2.png" alt="cloud3" onload="setLoadingFlags(1)">
   </section>
   <section id="section-three">
     <div id="blood-1"></div>
@@ -75,12 +73,12 @@
     <p class="woman2 text">Reyhaneh: <i>"I admit that I no longer care to live this kind of life..."</i></p>
     <p class="woman3 text">Reyhaneh:
       <i>
-        "I trusted Sarbandi(former agent of the Islamic Republic Ministry of Intelligence)’s fatherly and religious
-        posture..."
+        "I trusted Sarbandi’s fatherly and religious posture..."
       </i>
+      (Sarbandi was a former agent of the Islamic Republic Ministry of Intelligence)
     </p>
-    <p class="woman4 text">Reyhaneh:
-      <i>"ِYou are a religious man, for the sake of god please let me go..."
+    <p class="woman4 text">Reyhaneh to Sarbandi:
+      <i>"You are a religious man, for the sake of god please let me go..."
       </i>
     </p>
     <p class="woman5 text">Reyhaneh:
@@ -101,7 +99,7 @@
   <section id="section-four">
     <h3 id="part-two">PART 2</h3>
     <h4 id="life">LIFE</h4>
-    <img class="life-image" src="./images/life.png" alt="life" onload="setLoadingFlags(7)">
+    <img class="life-image" src="./images/doll1.png" alt="life" onload="setLoadingFlags(7)">
   </section>
   <section id="part-two-texts">
     <p class="life1 text">Saeeda: <i>"I don't wanna get married, I'm only 10...."</i></p>
@@ -124,11 +122,13 @@
     <p class="life8 text">Saeeda: <i>"I had to continue living with a man who brings other women home under the pretext of not being able
         to do some chores..."</i>
     </p>
-    <p class="life9 text">How soon they get old...</p>
-    <img class="story-two-doll1 doll" src="./images/doll1.png" alt="doll1" onload="setLoadingFlags(8)">
-    <img class="story-two-doll2 doll" src="./images/doll2.png" alt="doll2" data-speed="0.25" onload="setLoadingFlags(9)">
-    <img class="story-two-doll3 doll" src="./images/doll3.png" alt="doll3" data-speed="0.25" onload="setLoadingFlags(10)">
-    <img class="story-two-life" src="./images/life10.png" alt="life" onload="setLoadingFlags(11)">
+    <p class="life9 text">And there are thousands of innocent girls suffering from anti-woman idealogy of Islamic regime.</p>
+    <img class="story-two-doll1 doll" src="./images/life11.png" alt="doll1" onload="setLoadingFlags(8)">
+    <img class="story-two-doll2 doll" src="./images/life12.png" alt="doll2" data-speed="0.25" onload="setLoadingFlags(9)">
+    <img class="story-two-doll3 doll" src="./images/life13.png" alt="doll3" data-speed="0.25" onload="setLoadingFlags(10)">
+    <!-- <img class="story-two-life" src="./images/life13.png" alt="life" onload="setLoadingFlags(11)"> -->
+    <img class="story-two-soul1 parallax-soul" src="./images/soul1.png" alt="soul" onload="setLoadingFlags(29)" data-speed="0.04">
+    <img class="story-two-soul2 parallax-soul" src="./images/soul2.png" alt="soul" onload="setLoadingFlags(30)" data-speed="0.05">
 
     <!-- <img class="story-two-saten1 saten parallax-bg" src="./images/saten1.png" alt="saten1" data-speed="0.1"> -->
     <!-- <img class="story-two-saten2 saten parallax-bg" src="./images/saten2.png" alt="saten2" data-speed="0.3"> -->
@@ -186,8 +186,8 @@
   </section>
   <section id="cloudy-sky-2">
     <img class="cloud4" src="./images/cloud2.png" alt="cloud4" onload="setLoadingFlags(26)">
-    <img class="cloud5" src="./images/cloud2.png" alt="cloud5" onload="setLoadingFlags(27)">
     <img class="cloud6" src="./images/cloud2.png" alt="cloud6" onload="setLoadingFlags(28)">
+    <img class="cloud5" src="./images/cloud2.png" alt="cloud5" onload="setLoadingFlags(27)">
     <div id="sun"></div>
     <h3 id="end">The End</h3>
   </section>
@@ -211,11 +211,8 @@
         window.setTimeout(processImages, 50);
         return;
       }
-
-      console.log('hiiiii')
     }
 
-    NProgress.start();
     processImages();
   </script>
 
