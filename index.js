@@ -20,9 +20,8 @@ var userScroll = setInterval(() => {
     if (waitTreshold === 3) {
       scroll.classList.add('active');
     }
-
   }
-}, 3000);
+}, 2000);
 
 window.onbeforeunload = function () {
   var flood = document.getElementById('flood');
@@ -416,8 +415,8 @@ window.addEventListener('load', () => {
     .to(life4, { opacity: 0, duration: 2 })
     .to(storyTwoDoll2, { opacity: 0.5, duration: 2 })
     .to(storyTwoDoll2, { scale: 1.5, duration: 2 })
-    .to(life5, { opacity: 1, duration: 2 })
-    .to(life5, { opacity: 0, duration: 2 })
+    // .to(life5, { opacity: 1, duration: 2 })
+    // .to(life5, { opacity: 0, duration: 2 })
     .to(storyTwoDoll2, { opacity: 0, duration: 2 })
     .to(life6, { opacity: 1, duration: 2 })
     // .to(storyTwoSaten, { opacity: 1, duration: 1 })

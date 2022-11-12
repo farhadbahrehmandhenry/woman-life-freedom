@@ -702,6 +702,7 @@ body #part-one-texts .story-two-soul1, body #part-one-texts .story-two-soul2, bo
 
 body #part-one-texts .story-two-soul2, body #part-two-texts .story-two-soul2, body #part-three-texts .story-two-soul2, body #part-four-texts .story-two-soul2 {
   opacity: 0.2;
+  left: 50%;
   -webkit-transform: translateX(-47%);
           transform: translateX(-47%);
   z-index: 0;
