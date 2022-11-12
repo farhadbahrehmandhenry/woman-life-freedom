@@ -102,8 +102,6 @@ window.addEventListener('load', () => {
   var woman5 = document.querySelector('.woman5');
   var woman6 = document.querySelector('.woman6');
   var woman7 = document.querySelector('.woman7');
-  var storyOneBlood1 = document.getElementById('story-one-blood1');
-  var storyOneBlood2 = document.getElementById('story-one-blood2');
   var storyOneBlood3 = document.getElementById('story-one-blood3');
   var storyOneBlood4 = document.getElementById('story-one-blood4');
   var storyOneBlood5 = document.getElementById('story-one-blood5');
@@ -127,8 +125,6 @@ window.addEventListener('load', () => {
   var life9 = document.querySelector('.life9');
   var storyTwoDoll1 = document.querySelector('.story-two-doll1');
   var storyTwoDoll2 = document.querySelector('.story-two-doll2');
-  var storyTwoDoll3 = document.querySelector('.story-two-doll3');
-  var storyTwoSaten = document.querySelector('.story-two-saten7');
   var storyTwoLife = document.querySelector('.story-two-life');
 
   // section five
@@ -162,12 +158,7 @@ window.addEventListener('load', () => {
   var sectionSix = document.getElementById('section-six');
   var sectionSixText = document.getElementById('part-four');
   var womanLifeFreedom = document.getElementById('woman-life-freedom');
-  var impact1 = document.querySelector('.story-three-impact1');
-  var impact2 = document.querySelector('.story-three-impact2');
-  var impact3 = document.querySelector('.story-three-impact3');
   var bloodImpact1 = document.getElementById('impact-blood-1');
-  var bloodImpact2 = document.getElementById('impact-blood-2');
-  var bloodImpact3 = document.getElementById('impact-blood-3');
 
   var partFourTexts = document.getElementById('part-four-texts');
   var womanLifeFreedom1 = document.querySelector('.woman-life-freedom1');
@@ -296,24 +287,6 @@ window.addEventListener('load', () => {
     }
   });
 
-  // ScrollTrigger.create({
-  //   trigger: storyOneSeven,
-  //   duration: 2,
-  //   start: "top 60%",
-  //   end: "bottom 60%",
-  //   scrub: 1,
-  //   toggleClass: { targets: happy, className: 'move' },
-  //   // onUpdate: (self) => (),
-  //   // there are more hooks
-  //   // onEnter: () => alert('because of Reyhaneh, Down with dicatator!'),
-  //   onLeave: () => {
-  //     happy.innerText = 'desperate';
-  //     alert('Because of Reyhaneh, Down with dicatator!')
-  //   },
-  //   // onEnterBack: () => (),
-  //   // onLEaveBack: () => ()
-  // });
-
   const womanTl = gsap.timeline({
     scrollTrigger: {
       trigger: partOneTexts,
@@ -406,7 +379,7 @@ window.addEventListener('load', () => {
     .to(life1, { opacity: 0, duration: 2 })
     .to(storyTwoDoll1, { opacity: 1, duration: 2 })
     .to(life2, { opacity: 1, duration: 2 })
-    .to(storyTwoDoll1, { scale: 1.5, duration: 2 })
+    .to(storyTwoDoll1, { scale: 1.1, duration: 2 })
     .to(life2, { opacity: 0, duration: 2 })
     .to(life3, { opacity: 1, duration: 2 })
     .to(storyTwoDoll1, { opacity: 0, duration: 2 })
@@ -414,16 +387,13 @@ window.addEventListener('load', () => {
     .to(life4, { opacity: 1, duration: 2 })
     .to(life4, { opacity: 0, duration: 2 })
     .to(storyTwoDoll2, { opacity: 0.5, duration: 2 })
-    .to(storyTwoDoll2, { scale: 1.5, duration: 2 })
-    // .to(life5, { opacity: 1, duration: 2 })
-    // .to(life5, { opacity: 0, duration: 2 })
+    .to(storyTwoDoll2, { scale: 1.1, duration: 2 })
     .to(storyTwoDoll2, { opacity: 0, duration: 2 })
     .to(life6, { opacity: 1, duration: 2 })
-    // .to(storyTwoSaten, { opacity: 1, duration: 1 })
     .to(life6, { opacity: 0, duration: 2 })
     .to(storyTwoLife, { opacity: 0.7, duration: 2 })
     .to(life7, { opacity: 1, duration: 2 })
-    .to(storyTwoLife, { scale: 1.5, duration: 2 })
+    .to(storyTwoLife, { scale: 1.1, duration: 2 })
     .to(life7, { opacity: 0, duration: 2 })
     .to(life8, { opacity: 1, duration: 2 })
     .to(life8, { opacity: 0, duration: 2 })
@@ -439,15 +409,6 @@ window.addEventListener('load', () => {
     y: (i, target) => -ScrollTrigger.maxScroll(window) * target.dataset.speed,
     ease: "none"
   });
-  // gsap.to(".parallax-bg", {
-  //   scrollTrigger: {
-  //     trigger: partTwoTexts,
-  //     start: "60% center",
-  //     scrub: true,
-  //   },
-  //   y: (i, target) => -ScrollTrigger.maxScroll(window) * target.dataset.speed,
-  //   ease: "none"
-  // });
 
   gsap.to(sectionFiveText, {
     opacity: 0.9,
@@ -462,7 +423,7 @@ window.addEventListener('load', () => {
 
   gsap.to(freedom, {
     opacity: 0.9,
-    scale: 1.2,
+    scale: 1.1,
     duration: 2,
     scrollTrigger: {
       trigger: sectionFive,
@@ -515,47 +476,6 @@ window.addEventListener('load', () => {
     .to(freedom8, { opacity: 1, duration: 2 })
     .to(freedom8, { opacity: 0, duration: 2 })
 
-  // gsap.to(".parallax-gun", {
-  //   scrollTrigger: {
-  //     trigger: ".story-three-gun",
-  //     scrub: true
-  //   },
-  //   y: (i, target) => -ScrollTrigger.maxScroll(window) * target.dataset.speed,
-  //   ease: "none"
-  // });
-
-  // ScrollTrigger.create({
-  //   trigger: partThreeTexts,
-  //   duration: 2,
-  //   start: "20% 30%",
-  //   end: "bottom bottom",
-  //   pin: gun,
-  //   pinSpacing: false,
-  //   scrub: 1,
-  // });
-
-  // ScrollTrigger.create({
-  //   trigger: partThreeTexts,
-  //   duration: 2,
-  //   start: "20% 30%",
-  //   end: "bottom bottom",
-  //   pin: bullet,
-  //   pinSpacing: false,
-  //   scrub: 1,
-  // });
-
-  // const bulletTl = gsap.timeline({
-  //   scrollTrigger: {
-  //     trigger: gun,
-  //     start: "top 30%",
-  //     end: "top 20%",
-  //     scrub: 4,
-  //   }
-  // });
-
-  // freedomTl
-  //   .to(bullet, { left: '30rem', duration: 6 })
-
   gsap.to(bullet1, {
     left: '100%',
     duration: 5,
@@ -577,7 +497,6 @@ window.addEventListener('load', () => {
       scrub: 3,
     }
   });
-
 
   gsap.to(bullet3, {
     left: '100%',
@@ -645,26 +564,6 @@ window.addEventListener('load', () => {
     }
   });
 
-  // gsap.to(bloodImpact2, {
-  //   height: '10rem',
-  //   duration: 5,
-  //   scrollTrigger: {
-  //     trigger: sectionSix,
-  //     start: "top 40%",
-  //     scrub: 3,
-  //   }
-  // });
-
-  // gsap.to(bloodImpact3, {
-  //   height: '3rem',
-  //   duration: 5,
-  //   scrollTrigger: {
-  //     trigger: sectionSix,
-  //     start: "top 20%",
-  //     scrub: 3,
-  //   }
-  // });
-
   const womanLifeFreedomTl = gsap.timeline({
     scrollTrigger: {
       trigger: partFourTexts,
@@ -726,15 +625,4 @@ window.addEventListener('load', () => {
       scrub: 3,
     }
   });
-
-  // gsap.to(end, {
-  //   opacity: 1,
-  //   scale: 1.5,
-  //   duration: 5,
-  //   scrollTrigger: {
-  //     trigger: afterSun,
-  //     start: "center 70%",
-  //     scrub: 3,
-  //   }
-  // });
 });

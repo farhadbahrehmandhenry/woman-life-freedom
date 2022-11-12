@@ -373,7 +373,7 @@ body {
     .life-image {
       position: absolute;
       bottom: 15%;
-      left: 5rem;
+      left: 10%;
       width: 10rem;
       height: 10rem;
       opacity: 0;
@@ -446,7 +446,7 @@ body {
     position: relative;
     padding-right: 1rem;
     padding-left: 1rem;
-    overflow-x: hidden;
+    overflow: hidden;
     
     .text {
       opacity: 0;
@@ -602,6 +602,7 @@ body {
 
   #section-five {
     background-color: #CC1100;
+    overflow: hidden;
 
     .story-three-cage {
       width: 10rem;

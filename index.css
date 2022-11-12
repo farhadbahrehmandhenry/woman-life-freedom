@@ -516,7 +516,7 @@ body #section-three #woman-life-freedom, body #section-four #woman-life-freedom,
 body #section-three .life-image, body #section-four .life-image, body #section-five .life-image, body #section-six .life-image {
   position: absolute;
   bottom: 15%;
-  left: 5rem;
+  left: 10%;
   width: 10rem;
   height: 10rem;
   opacity: 0;
@@ -596,7 +596,7 @@ body #part-one-texts, body #part-two-texts, body #part-three-texts, body #part-f
   position: relative;
   padding-right: 1rem;
   padding-left: 1rem;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 body #part-one-texts .text, body #part-two-texts .text, body #part-three-texts .text, body #part-four-texts .text {
@@ -755,6 +755,7 @@ body #part-four-texts {
 
 body #section-five {
   background-color: #CC1100;
+  overflow: hidden;
 }
 
 body #section-five .story-three-cage {
